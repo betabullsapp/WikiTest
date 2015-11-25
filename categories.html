@@ -24,23 +24,13 @@
 <!-- PAGE WRAP -->
 <div id="page-wrap">
 
-    <!-- PRELOADER -->
-    <div id="preloader">
-        <div class="pre-icon">
-            <div class="pre-item pre-item-1"></div>
-            <div class="pre-item pre-item-2"></div>
-            <div class="pre-item pre-item-3"></div>
-            <div class="pre-item pre-item-4"></div>
-        </div>
-    </div>
-    <!-- END / PRELOADER -->
 
     <!-- HEADER -->
     <header id="header" class="header">
         <div class="container">
 
             <!-- LOGO -->
-            <div class="logo"><a href="index.html" style="color:white!important;"><!--<img src="images/logo.png" alt="">--><h4>WikiTest</h4></a></div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
             <!-- END / LOGO -->
 
             <!-- NAVIGATION -->
@@ -54,8 +44,8 @@
 
                 <!-- MENU -->
                 <ul class="menu">
-                    <li class="current-menu-item"><a href="index.html">Home</a></li>
-                   <!-- <li class="menu-item-has-children megamenu col-4">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-item-has-children current-menu-item megamenu col-4">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children">
@@ -80,7 +70,7 @@
                                     <li><a href="asignment-received.html">Asignment Received</a></li>
                                     <li><a href="asignment-submit.html">Asignment Submit</a></li>
                                     <li><a href="become-teacher.html">Become Teacher</a></li>
-                                    <li><a href="categories.html">Categories</a></li>
+                                    <li class="current-menu-item"><a href="categories.html">Categories</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
@@ -110,14 +100,14 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>-->
-                 <!--   <li class="menu-item-has-children">
+                    </li>
+                    <li class="menu-item-has-children">
                         <a href="blog-list.html">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="blog-list.html">Blog list</a></li>
                             <li><a href="blog-single.html">Blog single</a></li>
                         </ul>
-                    </li>-->
+                    </li>
                     <li class="menu-item-has-children">
                         <a href="#">Login</a>
                         <ul class="sub-menu">
@@ -126,7 +116,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="courses.html">Courses</a>
+                        <a href="categories.html">Course</a>
                     </li>
                 </ul>
                 <!-- END / MENU -->
@@ -455,416 +445,352 @@
     <!-- END / HEADER -->
 
 
-    <!-- HOME SLIDER -->
-    <section class="slide" style="background-image: url(images/homeslider/bg.jpg)">
+    <!-- SUB BANNER -->
+    <section class="sub-banner section">
+        <div class="awe-parallax bg-profile-feature"></div>
+        <div class="awe-overlay overlay-color-3"></div>
         <div class="container">
-            <div class="slide-cn" id="slide-home">
-                <!-- SLIDE ITEM -->
-                <div class="slide-item">
-                    <div class="item-inner">
-                        <div class="text">
-                            <h2>Learn more - Earn more</h2>
-                            <p>this is not only an elegant theme but also<br> a course management system<br> for wordpress and drupal
-                            </p>
-                            <div class="group">
-                                <a href="#" class="mc-btn btn-style-1">See full features</a>
-                            </div>
-                        </div>
-
-                        <div class="img">
-                            <img src="images/homeslider/img-thumb.png" alt="">
-                        </div>
-                    </div>
-
-                </div>  
-                <!-- SLIDE ITEM -->     
-
-                <!-- SLIDE ITEM -->
-                <div class="slide-item">
-                    <div class="item-inner">
-                        <div class="text">
-                            <h2>Learn more - Earn more</h2>
-                            <p>this is not only an elegant theme but also<br> a course management system<br> for wordpress and drupal
-                            </p>
-                            <div class="group">
-                                <a href="#" class="mc-btn btn-style-1">See full features</a>
-                            </div>
-                        </div>
-
-                        <div class="img">
-                            <img src="images/homeslider/img-thumb.png" alt="">
-                        </div>
-
-                    </div>  
-                </div>  
-                <!-- SLIDE ITEM -->  
-
+            <div class="sub-banner-content">
+                <h2 class="big">This is banner for promoted course</h2>
+                <p>this is not only an elegant theme but also a course management system for wordpress and drupal</p>
+                <a href="#" class="mc-btn btn-style-3">See course</a>
             </div>
         </div>
     </section>
-    <!-- END / HOME SLIDER -->
+    <!-- END / SUB BANNER -->
 
 
-    <!-- AFTER SLIDER -->
- <!--   <section id="after-slider" class="after-slider section">
-        <div class="awe-color bg-color-1"></div>
-        <div class="after-slider-bg-2"></div>
+    <!-- PAGE CONTROL -->
+    <section class="page-control">
         <div class="container">
-    
-            <div class="after-slider-content tb">
-                <div class="inner tb-cell">
-                    <h4>Find your course</h4>
-                    <div class="course-keyword">
-                        <input type="text" placeholder="Course keyword">
-                    </div>
-                    <div class="mc-select-wrap">
-                        <div class="mc-select">
-                            <select class="select" name="" id="all-categories">
-                                <option value="" selected>All categories</option>
-                                <option value="">2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mc-select-wrap">
-                        <div class="mc-select">
-                            <select class="select" name="" id="beginner-level">
-                                <option value="" selected>Beginner level</option>
-                                <option value="">Beginner level 2</option>
-                                <option value="">Beginner level 3</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="tb-cell text-right">
-                    <div class="form-actions">
-                        <input type="submit" value="Find Course" class="mc-btn btn-style-1">
-                    </div>
+            <div class="page-info">
+                <a href="index.html"><i class="icon md-arrow-left"></i>Back to home</a>
+            </div>
+            <div class="page-view">
+                View
+                <span class="page-view-info view-grid active" title="View grid"><i class="icon md-ico-2"></i></span>
+                <span class="page-view-info view-list" title="View list"><i class="icon md-ico-1"></i></span>
+                <div class="mc-select">
+                    <select class="select" name="" id="all-categories">
+                        <option value="">All level</option>
+                        <option value="">2</option>
+                    </select>
                 </div>
             </div>
-    
         </div>
-    </section> -->
-    <!-- END / AFTER SLIDER -->
+    </section>
+    <!-- END / PAGE CONTROL -->
     
-    <!-- SECTION 1 -->
-   <section id="mc-section-1" class="mc-section-1 section">
+    <!-- CATEGORIES CONTENT -->
+    <section id="categories-content" class="categories-content">
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-5">
-                    <div class="mc-section-1-content-1"> 
-                        <h2 class="big">Online And Offline Training Course Management</h2>
-                        <p class="mc-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        <a href="#" class="mc-btn btn-style-1">About us</a>
+    
+                <div class="col-md-9 col-md-push-3">
+                    <div class="content grid">
+                        <div class="row">
+                            <!-- ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            By <a href="#">Name of Mr or Mrs</a>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            $190
+                                            <span class="price-old">$145</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / ITEM -->
+                            <!-- ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            <span>By <a href="#">Name of Mr or Mrs</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            Free
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ITEM -->
+    
+                            <!-- END / ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            <span>By <a href="#">Name of Mr or Mrs</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            $123
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / ITEM -->
+    
+                            <!-- ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            By <a href="#">Name of Mr or Mrs</a>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            $190
+                                            <span class="price-old">$145</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / ITEM -->
+                            <!-- ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            <span>By <a href="#">Name of Mr or Mrs</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            Free
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ITEM -->
+    
+                            <!-- END / ITEM -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="mc-item mc-item-2">
+                                    <div class="image-heading">
+                                        <img src="images/feature/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="meta-categories"><a href="#">Web design</a></div>
+                                    <div class="content-item">
+                                        <div class="image-author">
+                                            <img src="images/avatar-1.jpg" alt="">
+                                        </div>
+                                        <h4><a href="course-intro.html">The Complete Digital Photography Course Amazon Top Seller</a></h4>
+                                        <div class="name-author">
+                                            <span>By <a href="#">Name of Mr or Mrs</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="ft-item">
+                                        <div class="rating">
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#" class="active"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="view-info">
+                                            <i class="icon md-users"></i>
+                                            2568
+                                        </div>
+                                        <div class="comment-info">
+                                            <i class="icon md-comment"></i>
+                                            25
+                                        </div>
+                                        <div class="price">
+                                            $123
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / ITEM -->
+                            
+                        </div>
                     </div>
                 </div>
+
+                <!-- SIDEBAR CATEGORIES -->
+                <div class="col-md-3 col-md-pull-9">
+                    <aside class="sidebar-categories">
+                        <div class="inner">
     
-                <div class="col-md-6 col-lg-offset-1">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-1"></i>
-                                <h4 class="title-box text-uppercase">CLEAN AND EASY</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  tincidunt ut laoreet</p>
+                            <!-- WIDGET TOP -->
+                            <div class="widget">
+                                <ul class="list-style-block">
+                                    <li class="current"><a href="#">Featured</a></li>
+                                    <li><a href="#">Staff pick</a></li>
+                                    <li><a href="#">Free</a></li>
+                                    <li><a href="#">Top paid</a></li>
+                                </ul>
                             </div>
-                        </div>
+                            <!-- END / WIDGET TOP -->
     
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-2"></i>
-                                <h4 class="title-box text-uppercase">TEACH AS YOU CAN</h4>
-                                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
+                            <!-- WIDGET CATEGORIES -->
+                            <div class="widget widget_categories">
+                                <ul class="list-style-block">
+                                    <li><a href="#">Technology</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Art and Photography</a></li>
+                                    <li><a href="#">Health and Fitness</a></li>
+                                    <li><a href="#">Lifestyle</a></li>
+                                    <li><a href="#">Math and Science</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Social Science</a></li>
+                                    <li><a href="#">Game</a></li>
+                                    <li><a href="#">Crafts and Hobbies</a></li>
+                                    <li><a href="#">Music</a></li>
+                                    <li><a href="#">Sports</a></li>
+                                </ul>
                             </div>
-                        </div>
+                            <!-- END / WIDGET CATEGORIES -->
     
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-3"></i>
-                                <h4 class="title-box text-uppercase">COMMUNITY SUPPORT</h4>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
+                            <!-- BANNER ADS -->
+                            <div class="mc-banner">
+                                <a href="#"><img src="images/banner-ads-1.jpg" alt=""></a>
                             </div>
-                        </div>
+                            <!-- END / BANNER ADS -->
     
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-4"></i>
-                                <h4 class="title-box text-uppercase">TRACKING PERFORMANCE</h4>
-                                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
+                            <!-- BANNER ADS -->
+                            <div class="mc-banner">
+                                <a href="#"><img src="images/banner-ads-2.jpg" alt=""></a>
                             </div>
+                            <!-- END / BANNER ADS -->
                         </div>
-                    </div>
+                    </aside>
                 </div>
+                <!-- END / SIDEBAR CATEGORIES -->
     
             </div>
         </div>
     </section>
-    <!-- END / SECTION 1 -->
+    <!-- END / CATEGORIES CONTENT -->
     
-    
-    
-    <!-- SECTION 2 -->
- <!--   <section id="mc-section-2" class="mc-section-2 section">
-        <div class="awe-parallax bg-section1-demo"></div>
-        <div class="overlay-color-1"></div>
-        <div class="container">
-            <div class="section-2-content">
-                <div class="row">
-                    
-                    <div class="col-md-5">
-                        <div class="ct">
-                            <h2 class="big">Learning online is easier than ever before</h2>
-                            <p class="mc-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <a href="#" class="mc-btn btn-style-3">See how it work</a>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-7">
-                        <div class="image">
-                            <img src="images/image.png" alt="">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- END / SECTION 2 -->
-    
-    
-    <!-- SECTION 3 -->
-   <!-- <section id="mc-section-3" class="mc-section-3 section">
-        <div class="container">
-            <!-- FEATURE -->
-       <!--     <div class="feature-course">
-                <h4 class="title-box text-uppercase">FEATURE COURSE</h4>
-                <a href="categories.html" class="all-course mc-btn btn-style-1">View all</a>
-                <div class="row">
-                    <div class="feature-slider">
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Java programming language.</a></h4>
-                                <div class="name-author">
-                                    By <a href="#">Ken Arnold</a>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                    <span class="price-old">$134</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Programming in Cobol</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">James Cooper</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    Free
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">JavaScript</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">Douglas Crockford</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                    <span class="price-old">$134</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Ruby</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#"> Cynthia Bond </a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Python</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">Guido van Rossum</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END / FEATURE -->
-    <!--    </div>
-    </section> -->
-    <!-- END / SECTION 3 -->
-    
-    
-    
-    <!-- BEFORE FOOTER -->
-  <!--  <section id="before-footer" class="before-footer">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-8">
-                    <div class="mc-count-item">
-                         <h4>Courses</h4>
-                         <p><span class="countup">2536,556</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Teachers</h4>
-                         <p><span class="countup">10,389</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Students</h4>
-                         <p><span class="countup">34,177</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Tuition Paid</h4>
-                         <p>$ <span class="countup">793,361,890</span></p>
-                     </div>
-                </div>
-    
-                <div class="col-lg-4">
-                    <div class="before-footer-link">
-                        <a href="#" class="mc-btn btn-style-2">Become a member</a>
-                        <a href="#" class="mc-btn btn-style-1">Become a teacher</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- END / BEFORE FOOTER -->
-
-    
+      
     <!-- FOOTER -->
     <footer id="footer" class="footer">
         <div class="first-footer">
@@ -918,8 +844,6 @@
 
                     <div class="col-md-4">
                         <div class="widget news_letter">
-                            <div class="awe-static bg-news_letter"></div>
-                            <div class="overlay-color-3"></div>
                             <div class="inner">
                                 <div class="letter-heading">
                                     <h3 class="md">News letter</h3>
@@ -933,6 +857,8 @@
                                     </form>
                                 </div>
                             </div>
+
+                            <div class="overlay-color-3"></div>
                         </div>
                     </div>
 
@@ -975,7 +901,6 @@
 <script type="text/javascript" src="js/library/jquery.owl.carousel.js"></script>
 <script type="text/javascript" src="js/library/jquery.appear.min.js"></script>
 <script type="text/javascript" src="js/library/perfect-scrollbar.min.js"></script>
-<script type="text/javascript" src="js/library/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

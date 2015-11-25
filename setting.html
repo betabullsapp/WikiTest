@@ -19,7 +19,7 @@
     <![endif]-->
     <title>Mega Course - Learning and Courses HTML5 Template</title>
 </head>
-<body id="page-top" class="home">
+<body id="page-top">
 
 <!-- PAGE WRAP -->
 <div id="page-wrap">
@@ -40,7 +40,7 @@
         <div class="container">
 
             <!-- LOGO -->
-            <div class="logo"><a href="index.html" style="color:white!important;"><!--<img src="images/logo.png" alt="">--><h4>WikiTest</h4></a></div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
             <!-- END / LOGO -->
 
             <!-- NAVIGATION -->
@@ -54,8 +54,8 @@
 
                 <!-- MENU -->
                 <ul class="menu">
-                    <li class="current-menu-item"><a href="index.html">Home</a></li>
-                   <!-- <li class="menu-item-has-children megamenu col-4">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-item-has-children current-menu-item megamenu col-4">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children">
@@ -67,7 +67,7 @@
                                     <li><a href="account-profile-owner-view.html">Account Profile Owner</a></li>
                                     <li><a href="account-profile-guest-view.html">Account Profile Guest</a></li>
                                     <li><a href="account-teaching.html">Account Teaching</a></li>
-                                    <li><a href="setting.html">Setting</a></li>
+                                    <li class="current-menu-item"><a href="setting.html">Setting</a></li>
                                 </ul>
                             </li>
 
@@ -110,14 +110,14 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>-->
-                 <!--   <li class="menu-item-has-children">
+                    </li>
+                    <li class="menu-item-has-children">
                         <a href="blog-list.html">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="blog-list.html">Blog list</a></li>
                             <li><a href="blog-single.html">Blog single</a></li>
                         </ul>
-                    </li>-->
+                    </li>
                     <li class="menu-item-has-children">
                         <a href="#">Login</a>
                         <ul class="sub-menu">
@@ -126,7 +126,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="courses.html">Courses</a>
+                        <a href="categories.html">Course</a>
                     </li>
                 </ul>
                 <!-- END / MENU -->
@@ -455,416 +455,125 @@
     <!-- END / HEADER -->
 
 
-    <!-- HOME SLIDER -->
-    <section class="slide" style="background-image: url(images/homeslider/bg.jpg)">
+    <!-- SETTING -->
+    <section class="setting">
         <div class="container">
-            <div class="slide-cn" id="slide-home">
-                <!-- SLIDE ITEM -->
-                <div class="slide-item">
-                    <div class="item-inner">
-                        <div class="text">
-                            <h2>Learn more - Earn more</h2>
-                            <p>this is not only an elegant theme but also<br> a course management system<br> for wordpress and drupal
-                            </p>
-                            <div class="group">
-                                <a href="#" class="mc-btn btn-style-1">See full features</a>
-                            </div>
-                        </div>
-
-                        <div class="img">
-                            <img src="images/homeslider/img-thumb.png" alt="">
-                        </div>
-                    </div>
-
-                </div>  
-                <!-- SLIDE ITEM -->     
-
-                <!-- SLIDE ITEM -->
-                <div class="slide-item">
-                    <div class="item-inner">
-                        <div class="text">
-                            <h2>Learn more - Earn more</h2>
-                            <p>this is not only an elegant theme but also<br> a course management system<br> for wordpress and drupal
-                            </p>
-                            <div class="group">
-                                <a href="#" class="mc-btn btn-style-1">See full features</a>
-                            </div>
-                        </div>
-
-                        <div class="img">
-                            <img src="images/homeslider/img-thumb.png" alt="">
-                        </div>
-
-                    </div>  
-                </div>  
-                <!-- SLIDE ITEM -->  
-
-            </div>
-        </div>
-    </section>
-    <!-- END / HOME SLIDER -->
-
-
-    <!-- AFTER SLIDER -->
- <!--   <section id="after-slider" class="after-slider section">
-        <div class="awe-color bg-color-1"></div>
-        <div class="after-slider-bg-2"></div>
-        <div class="container">
-    
-            <div class="after-slider-content tb">
-                <div class="inner tb-cell">
-                    <h4>Find your course</h4>
-                    <div class="course-keyword">
-                        <input type="text" placeholder="Course keyword">
-                    </div>
-                    <div class="mc-select-wrap">
-                        <div class="mc-select">
-                            <select class="select" name="" id="all-categories">
-                                <option value="" selected>All categories</option>
-                                <option value="">2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mc-select-wrap">
-                        <div class="mc-select">
-                            <select class="select" name="" id="beginner-level">
-                                <option value="" selected>Beginner level</option>
-                                <option value="">Beginner level 2</option>
-                                <option value="">Beginner level 3</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="tb-cell text-right">
-                    <div class="form-actions">
-                        <input type="submit" value="Find Course" class="mc-btn btn-style-1">
-                    </div>
-                </div>
-            </div>
-    
-        </div>
-    </section> -->
-    <!-- END / AFTER SLIDER -->
-    
-    <!-- SECTION 1 -->
-   <section id="mc-section-1" class="mc-section-1 section">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-md-5">
-                    <div class="mc-section-1-content-1"> 
-                        <h2 class="big">Online And Offline Training Course Management</h2>
-                        <p class="mc-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        <a href="#" class="mc-btn btn-style-1">About us</a>
-                    </div>
-                </div>
-    
-                <div class="col-md-6 col-lg-offset-1">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-1"></i>
-                                <h4 class="title-box text-uppercase">CLEAN AND EASY</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  tincidunt ut laoreet</p>
-                            </div>
-                        </div>
-    
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-2"></i>
-                                <h4 class="title-box text-uppercase">TEACH AS YOU CAN</h4>
-                                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
-                            </div>
-                        </div>
-    
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-3"></i>
-                                <h4 class="title-box text-uppercase">COMMUNITY SUPPORT</h4>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
-                            </div>
-                        </div>
-    
-                        <div class="col-sm-6">
-                            <div class="featured-item">
-                                <i class="icon icon-featured-4"></i>
-                                <h4 class="title-box text-uppercase">TRACKING PERFORMANCE</h4>
-                                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>
-    <!-- END / SECTION 1 -->
-    
-    
-    
-    <!-- SECTION 2 -->
- <!--   <section id="mc-section-2" class="mc-section-2 section">
-        <div class="awe-parallax bg-section1-demo"></div>
-        <div class="overlay-color-1"></div>
-        <div class="container">
-            <div class="section-2-content">
+            <div class="content-setting">
+                <h3 class="big black text-center">Settings</h3>
                 <div class="row">
-                    
-                    <div class="col-md-5">
-                        <div class="ct">
-                            <h2 class="big">Learning online is easier than ever before</h2>
-                            <p class="mc-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <a href="#" class="mc-btn btn-style-3">See how it work</a>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-7">
-                        <div class="image">
-                            <img src="images/image.png" alt="">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- END / SECTION 2 -->
-    
-    
-    <!-- SECTION 3 -->
-   <!-- <section id="mc-section-3" class="mc-section-3 section">
-        <div class="container">
-            <!-- FEATURE -->
-       <!--     <div class="feature-course">
-                <h4 class="title-box text-uppercase">FEATURE COURSE</h4>
-                <a href="categories.html" class="all-course mc-btn btn-style-1">View all</a>
-                <div class="row">
-                    <div class="feature-slider">
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Java programming language.</a></h4>
-                                <div class="name-author">
-                                    By <a href="#">Ken Arnold</a>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                    <span class="price-old">$134</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Programming in Cobol</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">James Cooper</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    Free
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">JavaScript</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">Douglas Crockford</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                    <span class="price-old">$134</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Ruby</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#"> Cynthia Bond </a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="mc-item mc-item-1">
-                            <div class="image-heading">
-                                <img src="images/feature/img-1.jpg" alt="">
-                            </div>
-                            <div class="meta-categories"><a href="#">Web design</a></div>
-                            <div class="content-item">
-                                <div class="image-author">
-                                    <img src="images/avatar-1.jpg" alt="">
-                                </div>
-                                <h4><a href="course-intro.html">Python</a></h4>
-                                <div class="name-author">
-                                    <span>By <a href="#">Guido van Rossum</a></span>
-                                </div>
-                            </div>
-                            <div class="ft-item">
-                                <div class="rating">
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#" class="active"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                </div>
-                                <div class="view-info">
-                                    <i class="icon md-users"></i>
-                                    2568
-                                </div>
-                                <div class="comment-info">
-                                    <i class="icon md-comment"></i>
-                                    25
-                                </div>
-                                <div class="price">
-                                    $190
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END / FEATURE -->
-    <!--    </div>
-    </section> -->
-    <!-- END / SECTION 3 -->
-    
-    
-    
-    <!-- BEFORE FOOTER -->
-  <!--  <section id="before-footer" class="before-footer">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-8">
-                    <div class="mc-count-item">
-                         <h4>Courses</h4>
-                         <p><span class="countup">2536,556</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Teachers</h4>
-                         <p><span class="countup">10,389</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Students</h4>
-                         <p><span class="countup">34,177</span></p>
-                     </div>
-                     <div class="mc-count-item">
-                         <h4>Tuition Paid</h4>
-                         <p>$ <span class="countup">793,361,890</span></p>
-                     </div>
-                </div>
-    
-                <div class="col-lg-4">
-                    <div class="before-footer-link">
-                        <a href="#" class="mc-btn btn-style-2">Become a member</a>
-                        <a href="#" class="mc-btn btn-style-1">Become a teacher</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- END / BEFORE FOOTER -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="notification-setting setting-box">
+                            <h4 class="sm black bold">Notification</h4>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="following-user">
+                                    <label for="following-user">
+                                        Following user
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="following-topic">
+                                    <label for="following-topic">
+                                        Following  topic
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="teaching-course">
+                                    <label for="teaching-course">
+                                        Teaching course
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="promotion-annoucement">
+                                    <label for="promotion-annoucement">
+                                        Promotion and Annoucement
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="new-user-following-you">
+                                    <label for="new-user-following-you">
+                                        New user following you
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
 
-    
+                            </ul>
+                        </div>
+                        <div class="setting-box">
+                            <h4 class="sm black bold">Email subscribe </h4>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="Finish-course">
+                                    <label for="Finish-course">
+                                        Finish a course
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="Receive-new-notification">
+                                    <label for="Receive-new-notification">
+                                        Receive new notification
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="have-new-message">
+                                    <label for="have-new-message">
+                                        Have new message
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="new-promotion-sales">
+                                    <label for="new-promotion-sales">
+                                        New promotion and sales
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="confirm-password">
+                                    <label for="confirm-password">
+                                        Confirm password
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="setting-box">
+                            <h4 class="sm black bold">Profile privacy</h4>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="show-my-location">
+                                    <label for="show-my-location">
+                                        Show my location
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="inputcheck" id="show-my-email">
+                                    <label for="show-my-email">
+                                        Show my email
+                                        <i class="icon md-check-1"></i>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-save">   
+                    <input type="submit" value="Save changes" class="mc-btn btn-style-1">
+                 </div>   
+            </div>
+        </div>    
+    </section>
+    <!-- END / SETTING -->
+
+
     <!-- FOOTER -->
     <footer id="footer" class="footer">
         <div class="first-footer">
@@ -918,8 +627,6 @@
 
                     <div class="col-md-4">
                         <div class="widget news_letter">
-                            <div class="awe-static bg-news_letter"></div>
-                            <div class="overlay-color-3"></div>
                             <div class="inner">
                                 <div class="letter-heading">
                                     <h3 class="md">News letter</h3>
@@ -933,6 +640,8 @@
                                     </form>
                                 </div>
                             </div>
+
+                            <div class="overlay-color-3"></div>
                         </div>
                     </div>
 
@@ -942,28 +651,31 @@
 
         <div class="second-footer">
             <div class="container">
-                <div class="contact">
-                    <div class="email">
-                        <i class="icon md-email"></i>
-                        <a href="#">course@megadrupal.com</a>
+                <div class="row">
+                    <div class="contact">
+                        <div class="email">
+                            <i class="icon md-email"></i>
+                            <a href="#">course@megadrupal.com</a>
+                        </div>
+                        <div class="phone">
+                            <i class="fa fa-mobile"></i>
+                            <span>+84 989 999 888</span>
+                        </div>
+                        <div class="address">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Maecenas sodales, nisl eget</span>
+                        </div>
                     </div>
-                    <div class="phone">
-                        <i class="fa fa-mobile"></i>
-                        <span>+84 989 999 888</span>
-                    </div>
-                    <div class="address">
-                        <i class="fa fa-map-marker"></i>
-                        <span>Maecenas sodales, nisl eget</span>
-                    </div>
+                    <p class="copyright">Copyright © 2014 Megadrupal. All rights reserved.</p>
                 </div>
-                <p class="copyright">Copyright © 2014 Megadrupal. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <!-- END / FOOTER -->
 
 
-    
+
+
 
 
 </div>
