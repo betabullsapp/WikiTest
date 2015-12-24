@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://www.kaldin.com/a/newcertificatetemplate.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Certificate Template </title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Certificate Template - Kaldin The Knowledge Evaluator_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Certificate Template - Kaldin The Knowledge Evaluator_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/ui.core.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/tabber.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/feedback.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certificate.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/jquery.form.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/nicEdit-certi.js"></script>
+<script type="text/javascript" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/quickpager.jquery.js"></script>
+<link href="./Certificate Template - Kaldin The Knowledge Evaluator_files/pdffonts.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+$(document).ready(function() {
+	Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+} );
+</script>
+<style>
+.progress {
+	position: relative;
+	width: 280px;
+	border: 1px solid #ddd;
+	padding: 1px;
+	border-radius: 3px;
+}
+.bar {
+	background-color: #B4F5B4;
+	width: 0%;
+	height: 20px;
+	border-radius: 3px;
+}
+.percent {
+	position: absolute;
+	display: inline-block;
+	top: 3px;
+	left: 48%;
+}
+.delbg {text-align: right; margin-top: -20px;}
+</style>
+<style type="text/css">
+h1, h2,ul { clear: both; }
+ul.paging li,
+ul.paging2 li { color: #000; }
+ul.red { outline:10px solid red; }
+ul.simplePagerNav li{ padding: 5px; height: 20px; width: 20px; }
+ul.simplePagerNav li a{ color: #333; text-decoration: none; }
+li.currentPage { background: red; }
+ul.simplePagerNav li.currentPage a { color: #fff; }
+table.pageme { border-collapse: collapse; border: 1px solid #ccc; }  
+table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }      
+</style>
+</head>
+<body>
+	
+	<div id="wrapper">
+	
+			
+<div id="header">
+    <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li class="active"><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+	
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" class="active">Listing</a></li>
+			    	<li><a href="Certificate Template - Kaldin The Knowledge Evaluator.html">Add New</a></li> 
+				</ul>
+				<div class="sidebar_note">
+					<p class="message note">In the Certificate template tokens enclosed with $$ will get replaced with real values when Certificate is generated.</p>
+					<p class="message note" onclick="setcursor();">Available Tokens are as below<br> 
+					$$PREFIX$$<br> $$CANDIDATENAME$$<br> $$EXAMNAME$$<br> $$RESULT$$<br> $$EXAMDATE$$<br>$$TODAYSDATE$$</p>
+					<p class="message note">Recommended Logo size 175 x 50</p>
+					<p class="message note">Recommended Background image size 595 x 842</p>
+					<p class="message note">Please preview the generated PDF file for spacing and alignments to get idea about final certificate</p>
+				</div>
+			</div>
+			<div id="main">
+				<h3>Certificate Template:</h3>
+				<hr>
+				
+				<form name="CertificateTemplateForm" method="post" action="http://www.kaldin.com/a/certificatetemplate.do" onsubmit="return validate();">
+				<div style="width:100%;float: left;">
+					<p><label>Certificate Name:</label><input type="text" name="templatename" size="40" value="" id="templatename"></p>
+				</div>
+				<div class="left_certificate_section" id="lcs" style="background-image: url(&quot;certificateimg/certificate1.jpg&quot;);">
+					<div id="certificate_container">
+						<div id="certificatetitle"></div>
+						<div id="candidatename"><div unselectable="on" style="width: 497px;"><div class=" nicEdit-panelContain" unselectable="on" style="overflow: hidden; width: 100%; border: 1px solid rgb(204, 204, 204); background-color: rgb(239, 239, 239);"><div class=" nicEdit-panel" unselectable="on" style="margin: 0px 2px 2px; zoom: 1; overflow: hidden;"><div unselectable="on" style="float: left; margin: 2px 1px 0px;"><div class=" nicEdit-selectContain" unselectable="on" style="width: 90px; height: 20px; cursor: pointer; overflow: hidden; opacity: 0.6;"><div unselectable="on" style="overflow: hidden; zoom: 1; border: 1px solid rgb(204, 204, 204); padding-left: 3px; background-color: rgb(255, 255, 255);"><div class=" nicEdit-selectControl" unselectable="on" style="overflow: hidden; float: right; height: 18px; width: 16px; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -432px 0px;"></div><div class=" nicEdit-selectTxt" unselectable="on" style="overflow: hidden; float: left; width: 66px; height: 14px; margin-top: 1px; font-family: sans-serif; text-align: center; font-size: 12px;">Font&nbsp;Size...</div></div></div></div><div unselectable="on" style="float: left; margin: 2px 1px 0px;"><div class=" nicEdit-selectContain" unselectable="on" style="width: 90px; height: 20px; cursor: pointer; overflow: hidden; opacity: 0.6;"><div unselectable="on" style="overflow: hidden; zoom: 1; border: 1px solid rgb(204, 204, 204); padding-left: 3px; background-color: rgb(255, 255, 255);"><div class=" nicEdit-selectControl" unselectable="on" style="overflow: hidden; float: right; height: 18px; width: 16px; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -432px 0px;"></div><div class=" nicEdit-selectTxt" unselectable="on" style="overflow: hidden; float: left; width: 66px; height: 14px; margin-top: 1px; font-family: sans-serif; text-align: center; font-size: 12px;">Font&nbsp;Family...</div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -36px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -108px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -324px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -252px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -144px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -54px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -216px 0px;"></div></div></div></div><div style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -18px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -198px 0px;"></div></div></div></div></div></div></div><div style="width: 497px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); overflow-y: auto; overflow-x: hidden; max-height: 75px;"><div class=" nicEdit-main" contenteditable="true" style="width: 489px; margin: 4px; min-height: 32px; overflow: hidden;"><br></div></div><textarea name="certTitle" cols="60" id="certTitle" style="display: none;"></textarea></div>
+						<div id="message1"><div unselectable="on" style="width: 497px;"><div class=" nicEdit-panelContain" unselectable="on" style="overflow: hidden; width: 100%; border: 1px solid rgb(204, 204, 204); background-color: rgb(239, 239, 239);"><div class=" nicEdit-panel" unselectable="on" style="margin: 0px 2px 2px; zoom: 1; overflow: hidden;"><div unselectable="on" style="float: left; margin: 2px 1px 0px;"><div class=" nicEdit-selectContain" unselectable="on" style="width: 90px; height: 20px; cursor: pointer; overflow: hidden; opacity: 0.6;"><div unselectable="on" style="overflow: hidden; zoom: 1; border: 1px solid rgb(204, 204, 204); padding-left: 3px; background-color: rgb(255, 255, 255);"><div class=" nicEdit-selectControl" unselectable="on" style="overflow: hidden; float: right; height: 18px; width: 16px; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -432px 0px;"></div><div class=" nicEdit-selectTxt" unselectable="on" style="overflow: hidden; float: left; width: 66px; height: 14px; margin-top: 1px; font-family: sans-serif; text-align: center; font-size: 12px;">Font&nbsp;Size...</div></div></div></div><div unselectable="on" style="float: left; margin: 2px 1px 0px;"><div class=" nicEdit-selectContain" unselectable="on" style="width: 90px; height: 20px; cursor: pointer; overflow: hidden; opacity: 0.6;"><div unselectable="on" style="overflow: hidden; zoom: 1; border: 1px solid rgb(204, 204, 204); padding-left: 3px; background-color: rgb(255, 255, 255);"><div class=" nicEdit-selectControl" unselectable="on" style="overflow: hidden; float: right; height: 18px; width: 16px; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -432px 0px;"></div><div class=" nicEdit-selectTxt" unselectable="on" style="overflow: hidden; float: left; width: 66px; height: 14px; margin-top: 1px; font-family: sans-serif; text-align: center; font-size: 12px;">Font&nbsp;Family...</div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -36px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -108px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -324px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -252px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -144px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -54px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -216px 0px;"></div></div></div></div><div style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -18px 0px;"></div></div></div></div><div unselectable="on" style="float: left; margin-top: 2px;"><div class=" nicEdit-buttonContain" unselectable="on" style="width: 20px; height: 20px; opacity: 0.6;"><div class=" nicEdit-button-undefined" unselectable="on" style="border: 1px solid rgb(239, 239, 239); background-color: rgb(239, 239, 239);"><div class=" nicEdit-button" unselectable="on" style="width: 18px; height: 18px; overflow: hidden; zoom: 1; cursor: pointer; background-image: url(&quot;images/nicEditorIcons.gif&quot;); background-position: -198px 0px;"></div></div></div></div></div></div></div><div style="width: 497px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); overflow-y: auto; overflow-x: hidden; max-height: 375px;"><div class=" nicEdit-main" contenteditable="true" style="width: 489px; margin: 4px; min-height: 352px; overflow: hidden;"><br></div></div><textarea name="message1" cols="60" rows="22" id="messageone" style="display: none;"></textarea></div>
+						<div id="logo" style="background-image: url(&quot;certificateimg/logo-blue.png&quot;); background-position: 0% 50%;"><div style="margin-top:70px;"><a href="#">upload your logo</a> | 
+						<a href="#">set default</a> | <a href="#">set none</a> | <a href="#">set left</a> | 
+						<a href="#">set center</a> | <a href="#">set right</a></div></div>
+					</div>
+					<input type="hidden" name="candName" value="" id="candName">
+					<div id="examname"><input type="hidden" name="examname" value="" id="exn"></div>
+					<div id="result"><input type="hidden" name="result" value="" id="resulttext"></div>
+					<div id="message2" style="display:none;"><textarea name="message2" cols="55" id="messagetwo"></textarea></div>
+					<div id="examdate"><input type="hidden" name="examdate" value="" id="exd"></div>
+				</div>
+				<div class="right_certificate_section">
+					<div>
+						<div class="rc_section_title">Change Background</div>
+						<div><div class="simplePagerContainer"><ul class="paging">
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg1" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb1.jpg" onclick="setBackgroundimage(&#39;certificate1.jpg&#39;,1);" class="current">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(1);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg2" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb2.jpg" onclick="setBackgroundimage(&#39;certificate2.jpg&#39;,2);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(2);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg3" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb3.jpg" onclick="setBackgroundimage(&#39;certificate3.jpg&#39;,3);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(3);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg4" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb4.jpg" onclick="setBackgroundimage(&#39;certificate4.jpg&#39;,4);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(4);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg5" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb5.jpg" onclick="setBackgroundimage(&#39;certificate5.jpg&#39;,5);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(5);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg6" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb6.jpg" onclick="setBackgroundimage(&#39;certificate6.jpg&#39;,6);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(6);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg7" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb7.jpg" onclick="setBackgroundimage(&#39;certificate7.jpg&#39;,7);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(7);"></div>
+								</li>
+							
+								<li class="simplePagerPage1" style="display: list-item;">
+									<img id="bg8" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb8.jpg" onclick="setBackgroundimage(&#39;certificate8.jpg&#39;,8);">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(8);"></div>
+								</li>
+							
+							</ul></div>
+						</div>
+						<div style="margin: 20px;float: left;width: 100%;text-align: center;"><a href="#">upload your background image</a></div>
+					</div>
+					<div style="display:none;">
+						<div class="rc_section_title">Select fields to be shown</div>
+						<div><input type="hidden" name="showCertTitle" value="" onchange="setCertificateTitle();">Certificates Title<br>
+							<input type="hidden" name="showCandName" value="" onchange="setCandidateName();">Candidate Name<br>
+							<input type="hidden" name="showMessage1" value="" onchange="setMessage();">Message 1<br>
+							<input type="hidden" name="showExamname" value="" onchange="setExamName();">Exam Name<br>
+							<input type="hidden" name="showResult" value="" onchange="setExamResult();">Exam Result<br>
+							<input type="hidden" name="showMessage2" value="" onchange="setMessage2();">Message 2<br>
+							<input type="hidden" name="showLogo" value="" onchange="setLogoStatus();">Logo<br>
+							<input type="hidden" name="showExamdate" value="" onchange="setExamDate();">Exam Date<br><br><br>
+						</div>
+					</div>
+				</div>
+				<div style="width:100%;text-align:center;float: left;">
+					<input type="submit" value="Save Certificate Template" class="btn_green">
+				</div>
+				<input type="hidden" name="operation" value="ADD">
+				<input type="hidden" name="id" value="">
+				<input type="hidden" name="startPage" value="1">
+				<input type="hidden" name="cbid" value="1" id="cbid">
+				<input type="hidden" name="logo" value="logo-blue.png" id="uplogo">
+				<input type="hidden" name="previewPdfName" value="">
+				<input type="hidden" name="logoPosition" value="left" id="logoPosition">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="dialog" title="Upload your logo" style="display: none;">
+		<p>The recommended logo size is of 175x50</p>
+		<p>Please use PNG/JPG/GIF/BMP files only</p>
+		<form action="http://www.kaldin.com/a/logoforcert.do" id="imageform" method="post" enctype="multipart/form-data">
+		<b>Upload your logo</b><input type="file" id="logoimg" name="logoimg">
+		
+				<input type="hidden" name="id" value="0">		
+		</form>
+	</div>
+	<div id="backgrounddialog" title="Upload your background image" style="display: none;">
+		<p>The recommended background image size is of 595x842</p>
+		<p>Please use PNG/JPG/GIF/BMP files only</p>
+		<div class="progress" style="display: none;">
+	        <div class="bar"></div>
+	        <div class="percent">0%</div>
+	    </div><p>&nbsp;</p>
+		<form action="http://www.kaldin.com/a/backgroundforcert.do" id="bgimageform" method="post" enctype="multipart/form-data">
+		<b>Upload your logo</b><input type="file" id="backgroundimg" name="backgroundimg">
+		
+				<input type="hidden" name="id" value="0">		
+		</form>
+	</div>
+	<form name="deletebg" action="http://www.kaldin.com/a/deletebg.do" method="post">
+		
+				<input type="hidden" name="eid" value="0">		
+		<input type="hidden" name="delbg" id="dbg">
+	</form>
+
+<!-- PAGE TIMING STATISTICS :  REQUEST TIMESTAMP | 2015-12-24_03.29.40 PROCESSING TIME | 1 ms  -->
+<script> 
+
+
+//setNewValues();
+setBackgroundimage('certificate1.jpg', 1);
+setLogo('logo-blue.png');
+setPosition('left');
+
+</script>
+<script type="text/javascript">
+new nicEditor({buttonList : ['fontSize','fontFamily','bold','italic','underline','strikethrough','left','center','right','forecolor','removeformat'], maxHeight : 75}).panelInstance('certTitle');
+new nicEditor({buttonList : ['fontSize','fontFamily','bold','italic','underline','strikethrough','left','center','right','forecolor','removeformat'], maxHeight : 375}).panelInstance('messageone');
+//new nicEditor({buttonList : ['fontSize','fontFamily','bold','italic','underline','strikethrough','left','center','right','forecolor'], maxHeight : 160}).panelInstance('messagetwo');
+</script>	
+<script type="text/javascript">
+$(document).ready(function() { 
+	$('#logoimg').change(function() {
+		$("#imageform").ajaxForm( {
+			success:       showResponse
+		}).submit();
+	});
+	$('#backgroundimg').change(function() {
+		var bar = $('.bar');
+		var percent = $('.percent');
+		var status = $('#status');
+		var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
+		$("#bgimageform").ajaxForm( {
+			beforeSubmit: function() {
+				var sFileName = backgroundimg.value;
+	            if (sFileName.length > 0) {
+	                var blnValid = false;
+	                for (var j = 0; j < _validFileExtensions.length; j++) {
+	                    var sCurExtension = _validFileExtensions[j];
+	                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+	                        blnValid = true;
+	                        break;
+	                    }
+	                }
+	                if (!blnValid) {
+	                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+	                    backgroundimg.value = "";
+	                    return false;
+	                }
+	            }
+	            return true;
+			},
+			uploadProgress: function(event, position, total, percentComplete) {
+				$(".progress").show();
+				var percentVal = percentComplete + '%';
+		        bar.width(percentVal)
+		        percent.html(percentVal);
+			},
+			success: showBackground
+		}).submit();
+	});
+	$("ul.paging").quickPager({pageSize:"15"});
+}); 
+</script>
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>
