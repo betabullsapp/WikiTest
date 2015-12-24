@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.kaldin.com/a/settings.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Setting</title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/ui.core.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/tabber.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/feedback.js"></script>
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/createuser.js"></script>
+<script type="text/javascript">
+
+function dosubmit(){
+	var frm = document.forms[0];
+	frm.operation.value = "save";
+	frm.submit();
+}
+
+function showsummaryDetails(){
+	var frm = document.forms[0];
+	if(frm.showCandidateResult.value == 1){
+		document.getElementById("details").style.display = '';	
+	}else if(frm.showCandidateResult.value == 0){
+		document.getElementById("details").style.display = 'none';
+	}
+}
+</script>
+</head>
+<body>
+	
+	<div id="wrapper">
+		
+			
+<div id="header">
+    <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" class="active">Email Templates</a></li>
+					<li><a href="Plan Contact Response Messages.html">Messages</a></li>
+					<li><a href="Transaction History.html">Transaction History</a></li>
+					<li><a href="Setting - Kaldin Online Exam to Evaluate Knowledge.html">Show Result</a></li>
+					<li><a href="User Profile - Kaldin - Online Exam To Evaluate Knowledge.html">User Profile Required</a></li>
+					
+				</ul>
+				<div class="sidebar_note"><p class="message note">Set Show Results To Candidate to 'Yes' , if you want your candidates to view their results after finishing examination</p></div>
+			</div>
+			<form name="settingForm" method="post" action="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/Setting - Kaldin Online Exam to Evaluate Knowledge.html">
+				<div id="main">
+					<div class="regilogin_box">
+					
+						<h3>Show Result to Candidate</h3>
+						<hr>
+						<p class="message info">
+						Set Show Results To Candidate to 'Yes' , if you want your candidates to view their results after finishing examination
+						</p>
+						<input type="hidden" name="operation" value="">
+						
+						<p>
+                             <label style="width: 180px;">Show Result to Candidate: </label>                                 
+                             <select name="showCandidateResult" onchange="showsummaryDetails();" id="showCandidateResult"><option value="1">Yes</option>
+								<option value="0" selected="selected">No</option></select>                                 
+                        </p>
+                        
+	                        <p id="details" style="display: none;">
+	                             <label style="width: 180px;">Summary/Details: </label>                                 
+	                             <select name="summaryDetails" id="summaryDetails"><option value="0" selected="selected">Summary</option>
+									<option value="1">Details</option></select>                                 
+	                        </p>
+                        
+						
+						<button class="btn_green" type="button" onclick="dosubmit();">Save</button>						
+					</div>
+				</div>
+			</form>
+			</div>
+</div>
+<img height="1" width="1" src="./Setting - Kaldin Online Exam to Evaluate Knowledge_files/hit.php">
+<script type="text/javascript">
+   $(document).ready(function() {
+     Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+   });
+</script>
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>

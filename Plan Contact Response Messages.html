@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.kaldin.com/a/viewmessage.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Plan Contact Response Messages</title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Plan Contact Response Messages_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Plan Contact Response Messages_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Plan Contact Response Messages_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/ui.core.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/tabber.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Plan Contact Response Messages_files/feedback.js"></script>
+<script type="text/javascript" src="./Plan Contact Response Messages_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<style>
+#comments ol { list-style: none; list-style-type: none; }
+.commentInfo, .commentDateStamp { display: inline-block; vertical-align: top; margin: 0; padding: 0; line-height: 18px; width: 140px; }
+.adminComment .comment { background: #d7e4ed; }
+.comment { position: relative; display: inline-block; width: 700px; vertical-align: top; padding: 10px 10px; background: #eee; margin-bottom: 15px; margin-left: 0;
+box-sizing: border-box; }
+.comment:after { content: ""; position: absolute; top: 5px; left: -15px; border-style: solid; border-width: 10px 15px 10px 0; border-color: transparent #eee; display: block; width: 0; z-index: 1; }
+.adminComment .comment:after { border-color: transparent #d7e4ed; }
+</style>
+<script>
+var pid = "-1";
+function showContactusDialog(parentid){
+	pid = parentid;
+	$("#dialog").dialog();
+}
+function cancel(){
+	$("#dialog").dialog('close');
+}
+function sendContactusMessage() {
+	var message = document.getElementById("cprmsg").value;
+	if(message ==""){
+		alert("Please enter the message.");
+	 	return;
+	 }else{
+		$.post("sendpcrequest.do?check", {
+			msg : message,
+			pid : pid,
+			opr : "req"
+		}, function(data) {
+			if (data == null) {
+				message(container, "Error while sending request...");
+			} else {			
+				if(data == 'success'){
+					alert("Your request has been send successfully.");
+					$("#dialog").dialog('close');
+				}
+			}
+		});
+	 }
+}	
+</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		
+			
+<div id="header">
+     <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+    
+        
+    
+  
+      
+        
+      
+      
+ <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" class="active">Email Templates</a></li>
+					<li><a href="Plan Contact Response Messages.html">Messages</a></li>
+					<li><a href="Transaction History.html">Transaction History</a></li>
+					<li><a href="Setting - Kaldin Online Exam to Evaluate Knowledge.html">Show Result</a></li>
+					<li><a href="User Profile - Kaldin - Online Exam To Evaluate Knowledge.html">User Profile Required</a></li>
+					
+				</ul>
+				<div class="sidebar_note message note"><p>Responses to the request for plan Customizations</p></div>
+			</div>
+			<div id="main">
+				<h3>Plan Contact Response Messages</h3>
+				<hr>
+				<div id="dialog" title="Customize Plan Request" style="display: none;">
+					<p><label>Customize Plan Message:</label><textarea rows="7" name="message" id="cprmsg"></textarea></p>
+					<p style="text-align: right;">
+							<input type="button" onclick="cancel();" value="Cancel" class="btn_green">&nbsp;
+							<input type="button" onclick="sendContactusMessage();" value="Send Message" class="btn_green">
+					</p>
+				</div>
+				<div>
+					
+					
+						<div class="message note"><a href="#">Contact us</a> for customized plan or to change your current exam limits</div>
+					
+				</div>						
+			</div>
+		</div>
+	</div>
+
+<!-- PAGE TIMING STATISTICS :  REQUEST TIMESTAMP | 2015-12-24_03.32.53 PROCESSING TIME | 1 ms  -->		
+
+</body></html>
