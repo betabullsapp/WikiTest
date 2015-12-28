@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://www.kaldin.com/a/newcertificatetemplate.do -->
+
 <html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Certificate Template </title>
+<title>wikiTest</title>
 <link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
 <link href="./Certificate Template - Kaldin The Knowledge Evaluator_files/style_blue.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./Certificate Template - Kaldin The Knowledge Evaluator_files/feedback.css" type="text/css" media="screen">
@@ -99,7 +99,7 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
       
       <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
       <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
-	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
       </ul>
   <!-- nav end -->
   
@@ -114,7 +114,7 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 				</ul>
 				<div class="sidebar_note">
 					<p class="message note">In the Certificate template tokens enclosed with $$ will get replaced with real values when Certificate is generated.</p>
-					<p class="message note" onclick="setcursor();">Available Tokens are as below<br> 
+					<p class="message note">Available Tokens are as below<br> 
 					$$PREFIX$$<br> $$CANDIDATENAME$$<br> $$EXAMNAME$$<br> $$RESULT$$<br> $$EXAMDATE$$<br>$$TODAYSDATE$$</p>
 					<p class="message note">Recommended Logo size 175 x 50</p>
 					<p class="message note">Recommended Background image size 595 x 842</p>
@@ -125,7 +125,7 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 				<h3>Certificate Template:</h3>
 				<hr>
 				
-				<form name="CertificateTemplateForm" method="post" action="http://www.kaldin.com/a/certificatetemplate.do" onsubmit="return validate();">
+				<form name="CertificateTemplateForm" method="post" action="#">
 				<div style="width:100%;float: left;">
 					<p><label>Certificate Name:</label><input type="text" name="templatename" size="40" value="" id="templatename"></p>
 				</div>
@@ -150,43 +150,43 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 						<div><div class="simplePagerContainer"><ul class="paging">
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg1" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb1.jpg" onclick="setBackgroundimage(&#39;certificate1.jpg&#39;,1);" class="current">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(1);"></div>
+									<img id="bg1" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb1.jpg" class="current">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg2" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb2.jpg" onclick="setBackgroundimage(&#39;certificate2.jpg&#39;,2);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(2);"></div>
+									<img id="bg2" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb2.jpg" >
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg3" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb3.jpg" onclick="setBackgroundimage(&#39;certificate3.jpg&#39;,3);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(3);"></div>
+									<img id="bg3" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb3.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg4" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb4.jpg" onclick="setBackgroundimage(&#39;certificate4.jpg&#39;,4);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(4);"></div>
+									<img id="bg4" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb4.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" ></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg5" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb5.jpg" onclick="setBackgroundimage(&#39;certificate5.jpg&#39;,5);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(5);"></div>
+									<img id="bg5" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb5.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg6" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb6.jpg" onclick="setBackgroundimage(&#39;certificate6.jpg&#39;,6);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(6);"></div>
+									<img id="bg6" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb6.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg7" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb7.jpg" onclick="setBackgroundimage(&#39;certificate7.jpg&#39;,7);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(7);"></div>
+									<img id="bg7" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb7.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 								<li class="simplePagerPage1" style="display: list-item;">
-									<img id="bg8" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb8.jpg" onclick="setBackgroundimage(&#39;certificate8.jpg&#39;,8);">
-									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image" onclick="deleteBGimage(8);"></div>
+									<img id="bg8" src="./Certificate Template - Kaldin The Knowledge Evaluator_files/certhumb8.jpg">
+									<div class="delbg" id="delbg"><img src="./Certificate Template - Kaldin The Knowledge Evaluator_files/delete.png" title="Delete Background Image"></div>
 								</li>
 							
 							</ul></div>
@@ -195,14 +195,14 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 					</div>
 					<div style="display:none;">
 						<div class="rc_section_title">Select fields to be shown</div>
-						<div><input type="hidden" name="showCertTitle" value="" onchange="setCertificateTitle();">Certificates Title<br>
-							<input type="hidden" name="showCandName" value="" onchange="setCandidateName();">Candidate Name<br>
-							<input type="hidden" name="showMessage1" value="" onchange="setMessage();">Message 1<br>
-							<input type="hidden" name="showExamname" value="" onchange="setExamName();">Exam Name<br>
-							<input type="hidden" name="showResult" value="" onchange="setExamResult();">Exam Result<br>
-							<input type="hidden" name="showMessage2" value="" onchange="setMessage2();">Message 2<br>
-							<input type="hidden" name="showLogo" value="" onchange="setLogoStatus();">Logo<br>
-							<input type="hidden" name="showExamdate" value="" onchange="setExamDate();">Exam Date<br><br><br>
+						<div><input type="hidden" name="showCertTitle" value="">Certificates Title<br>
+							<input type="hidden" name="showCandName" value="">Candidate Name<br>
+							<input type="hidden" name="showMessage1" value="">Message 1<br>
+							<input type="hidden" name="showExamname" value="">Exam Name<br>
+							<input type="hidden" name="showResult" value="">Exam Result<br>
+							<input type="hidden" name="showMessage2" value="">Message 2<br>
+							<input type="hidden" name="showLogo" value="">Logo<br>
+							<input type="hidden" name="showExamdate" value="">Exam Date<br><br><br>
 						</div>
 					</div>
 				</div>
@@ -223,7 +223,7 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 	<div id="dialog" title="Upload your logo" style="display: none;">
 		<p>The recommended logo size is of 175x50</p>
 		<p>Please use PNG/JPG/GIF/BMP files only</p>
-		<form action="http://www.kaldin.com/a/logoforcert.do" id="imageform" method="post" enctype="multipart/form-data">
+		<form action="#" id="imageform" method="post" enctype="multipart/form-data">
 		<b>Upload your logo</b><input type="file" id="logoimg" name="logoimg">
 		
 				<input type="hidden" name="id" value="0">		
@@ -236,13 +236,13 @@ table.pageme td { border-collapse: collapse; border: 1px solid #ccc; }
 	        <div class="bar"></div>
 	        <div class="percent">0%</div>
 	    </div><p>&nbsp;</p>
-		<form action="http://www.kaldin.com/a/backgroundforcert.do" id="bgimageform" method="post" enctype="multipart/form-data">
+		<form action="#" id="bgimageform" method="post" enctype="multipart/form-data">
 		<b>Upload your logo</b><input type="file" id="backgroundimg" name="backgroundimg">
 		
 				<input type="hidden" name="id" value="0">		
 		</form>
 	</div>
-	<form name="deletebg" action="http://www.kaldin.com/a/deletebg.do" method="post">
+	<form name="deletebg" action="#" method="post">
 		
 				<input type="hidden" name="eid" value="0">		
 		<input type="hidden" name="delbg" id="dbg">
