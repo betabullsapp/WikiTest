@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)http://www.kaldin.com/a/Topic.do -->
+
 <html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Question Sub Category</title>
+<title>wikiTest</title>
 <link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
 <link href="./Question Sub Category - Kaldin _ Open Source Web-based online examination software_files/style_blue.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./Question Sub Category - Kaldin _ Open Source Web-based online examination software_files/feedback.css" type="text/css" media="screen">
@@ -95,7 +95,7 @@ $(document).ready(function() {
       
       <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
       <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
-	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
       </ul>
   <!-- nav end -->
   
@@ -154,7 +154,7 @@ $(document).ready(function() {
 												
 												</p><p>
 													<label>Sub Category:</label>
-													<input type="text" size="30" id="topicname" onkeypress="return charsonly(event)">
+													<input type="text" size="30" id="topicname">
 												</p>
 											<p></p>
 										</td>
@@ -163,8 +163,8 @@ $(document).ready(function() {
 										<td style="border:0;height: 15px;">
 											
 											<p style="text-align: right;">
-												<input type="button" onclick="cancelAddOpr();" value="Cancel" class="btn_green">&nbsp;
-												<input type="button" value="Save" onclick="saveTopic();" class="btn_green">
+												<input type="button" value="Cancel" class="btn_green">&nbsp;
+												<input type="button" value="Save" class="btn_green">
 											</p>
 										</td>
 									</tr>
@@ -176,11 +176,11 @@ $(document).ready(function() {
 			
 			
 				<div class="table_top" style="position: relative;">
-					<input type="button" id="add_subcategory" value="Add Sub Category" class="btn_green_sml" onclick="addSubCategory();">
+					<input type="button" id="add_subcategory" value="Add Sub Category" class="btn_green_sml">
 						
 					<div style="float: right; margin: 0 0 0 10px;">
 							<input type="text" id="searchtext" name="searchtext" size="100" style="width:200px;important!">
-							<button type="submit" class="btn_green_sml" onclick="submitSearch();">Search</button>
+							<button type="submit" class="btn_green_sml">Search</button>
 					</div> 
 				</div>
 				<div id="q_bank" class="filterdiv" style="display: none;">
@@ -188,7 +188,7 @@ $(document).ready(function() {
 						<table align="center" width="400">
 							<tbody><tr>
 								<td>Category:</td>
-								<td><select id="subject" class="combo" onchange="return getTopic(&quot;&quot;);">
+								<td><select id="subject" class="combo">
 										<option value="0">Select Category</option>
 										
 											<option value="6559">Aptitude Questions</option>
@@ -200,7 +200,7 @@ $(document).ready(function() {
 					
 				</div>
 				
-					<form name="TopicForm" method="post" action="./Question Sub Category - Kaldin _ Open Source Web-based online examination software_files/Question Sub Category - Kaldin _ Open Source Web-based online examination software.html">
+					<form name="TopicForm" method="post" action="#">
 						<input type="hidden" name="searchKeyword" value="">
 						<div id="dialog"></div>
 						<table class="display" id="example">
@@ -226,9 +226,9 @@ $(document).ready(function() {
 											
 										
 										<td width="10%" align="center">
-											<a href="#" onclick="showEditDialog(3488,&#39;General Questions&#39;);">
+											<a href="#">
 												<img src="./Question Sub Category - Kaldin _ Open Source Web-based online examination software_files/edit.png" title="Edit"></a>&nbsp;
-											<a href="#" class="basicDelete" onclick="return doTopicDelete(3488);"> 
+											<a href="#" class="basicDelete" > 
 												<img src="./Question Sub Category - Kaldin _ Open Source Web-based online examination software_files/delete.png" title="Delete"></a>
 										</td>
 									</tr>
