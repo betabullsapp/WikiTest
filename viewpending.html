@@ -19,7 +19,43 @@
 <script type="text/javascript" src="./Email Templates - Kaldin The Knowledge Evaluator_files/jquery.browser.min.js"></script>
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->         
+<![endif]--> 
+ <style>
+    .black_overlay{
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        
+        z-index:1001;
+        -moz-opacity: 0.8;
+       
+        filter: alpha(opacity=80);
+
+    }
+    .white_content {
+        display: none;
+        position: absolute;
+        top: 12%;
+        left: 25%;
+        width: 35%;
+        height: 65%;
+        padding: 16px;
+        border: 1px solid orange;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+		border-radius: 3px;
+    }
+	.ui-widget-overlay {
+    background: #666666 url(images/ui-bg_diagonals-thick_20_666666_40x40.png) 100% 100% repeat;
+    opacity: .50;
+    filter: Alpha(Opacity=50);
+	width:100%;
+}
+</style>        
 </head>
 <body>
 	
@@ -93,35 +129,109 @@
 									<th scope="col" class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Email Type: activate to sort column descending" style="width: 241px;">Name</th>
 									<th scope="col" class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="From: activate to sort column ascending" style="width: 310px;">Organization</th>
 									<th scope="col" class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Subject: activate to sort column ascending" style="width: 388px;">Status</th>
-									
+									<th scope="col" class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Subject: activate to sort column ascending" style="width: 388px;">Action</th>
 								</tr>
 							</thead>
 							<tbody role="alert" aria-live="polite" aria-relevant="all">
-								<tr class="odd">
+								<tr  class="odd">
 									<td class=" sorting_1">M jayaram</td>
 									<td class=" sorting_2">Beta Bulls PVT LTD</td>
-									<td class=" ">Approve / Reject</td>
+									<td class=" ">New</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
 								</tr>
 								<tr>
 									<td class=" sorting_1">M jayaram</td>
 									<td class=" sorting_2">Beta Bulls PVT LTD</td>
-									<td class=" ">Approve / Reject</td>
+									<td class=" ">Rejected</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
 								</tr>
-								<tr class="odd">
+								<tr  class="odd">
 									<td class=" sorting_1">M jayaram</td>
 									<td class=" sorting_2">Beta Bulls PVT LTD</td>
-									<td class=" ">Approve / Reject</td>
+									<td class=" ">Approved</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
+								</tr>
+								<tr  class="odd">
+									<td class=" sorting_1">M jayaram</td>
+									<td class=" sorting_2">Beta Bulls PVT LTD</td>
+									<td class=" ">New</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
 								</tr>
 								<tr>
 									<td class=" sorting_1">M jayaram</td>
 									<td class=" sorting_2">Beta Bulls PVT LTD</td>
-									<td class=" ">Approve / Reject</td>
+									<td class=" ">Rejected</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
 								</tr>
+								<tr  class="odd">
+									<td class=" sorting_1">M jayaram</td>
+									<td class=" sorting_2">Beta Bulls PVT LTD</td>
+									<td class=" ">Approved</td>
+									<td class="">
+									<a href = "viewpending2.html">
+									Approved / Rejected
+									</a>
+									</td>
+								</tr>
+								
 							</tbody>
 						</table>
 
+						
+						
+						
+						 
+    <div id="light" class="white_content" >
+	
+		<div style="float:right">
+		
+	<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">X</a>
+	</div>
+	
+	<p style="padding-top: 15px;text-align: center;">Comment: <input type="text" id="dlggroupname" size="30" onkeypress="return charsonly(event)"></p>
+	<p></p>
+	<p style="text-align: center;"><a href="viewpending.html"><input type="button" value="Send" onclick="saveGroup();" class="btn_green"></a></p>
+	
+	</div>
+    <div id="fade" class="black_overlay ui-widget-overlay"></div>
+						
+				
+
+
+				
+						
 				
 			</div>
+			
+			
+			<div class="table_top">
+					<a href="Groups - Online Exam to Evaluate Knowledge1.html">
+					<input type="button" value="Add New Group" class="btn_green_sml"></a>
+					</div>
+			
+			
+			
+			
 		</div>
 		<iframe class="privew" id="preview" style="position: absolute; top: 170px; right: 150px; height: 300px; display: none; border: 1px solid #AAA; background-color: #FFF; border-radius: 5px; width: 750px;"></iframe>
 	</div>
