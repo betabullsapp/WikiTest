@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>wikiTest</title>
+
+<link href="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/ui.core.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/tabber.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/feedback.js"></script>
+<script type="text/javascript" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript">
+	showDialog = function() {
+
+		$("#dialog").dialog({
+			autoOpen : true,
+			height : 'auto',
+			width : 'auto',
+			modal : true,
+			closeOnEscape : false
+		});
+		$("#dialog").dialog('option', 'title', "Candidate Profile");
+		//$("#dialog").dialog('option', 'show', 'drop');
+		$("#dialog").dialog('option', 'resizable', true);
+		$("#dialog").dialog('option', 'position', 'top');
+
+		$("#dialog").dialog('open');
+		$("#dialog").dialog('defaults','bgiframe',true);
+	}
+
+	function doUserDelete(email) {
+		var frm = document.forms[0];
+		frm.email.value = email;
+		frm.operation.value = "delete";
+		if (confirm('Do you want to delete this User?')) {
+			document.forms[0].submit();
+		}
+	}
+
+	
+	function dispProfile(str) {
+		var temp = new Array();
+		temp = str.split("$");
+		var res = eval(temp[0]);
+		if (res != null) {
+			var mystr; var pstr;
+			for ( var i = 0; i < res.length; i++) {
+				pstr = "<tr><td>" + res[i].firstname + "</td><td>" + res[i].lastname
+						+ "</td><td>" + res[i].emailid + "</td><td>"
+						+ res[i].birthdate + "</td><td>" + res[i].mobileNumber + "</td><td>" + res[i].city + "</td></tr>";
+			}
+
+			tstr ="<table id='academics'><thead><tr><th scope='col'>First Name</th><th scope='col'>Last Name</th><th scope='col'>Email-Id</th>"
+				 +"<th scope='col'>Birth Date</th><th scope='col'>MobileNumber</th><th scope='col'>City</th></tr></thead>";
+			document.getElementById('myptable').innerHTML = tstr + pstr + "</table>";
+			
+			var myres = "(" + temp[1] + ")";
+			var res = eval(myres);
+			for ( var i = 0; i < res.length; i++) {
+				if (i == 0) {
+					mystr = "<tr><td>" + res[i].qualification + "</td><td>" + res[i].university + "</td><td>"
+							+ res[i].passingyear + "</td><td>" + res[i].percentage + "</td></tr>";
+				} else {
+					mystr = mystr + "<tr><td>" + res[i].qualification + "</td><td>" + res[i].university + "</td><td>"
+							+ res[i].passingyear + "</td><td>" + res[i].percentage + "</td></tr>";
+				}
+			}
+			tstr ="<table id='academics'><thead><tr><th scope='col'>Qualification</th><th scope='col'>University/Board</th>"
+				 +"<th scope='col'>Yearing of Passing</th><th scope='col'>Percentage/Grade</th></tr></thead>";
+		
+			if (mystr == undefined)
+				mystr = "<tr><td colspan=4><center>Information Is Not Available</center></td></tr>";
+			document.getElementById('myatable').innerHTML = tstr + mystr + "</table>";
+
+			var myres = "(" + temp[2] + ")";
+			var res = eval(myres);
+			var myestr;
+			for ( var i = 0; i < res.length; i++) {
+				if (i == 0) {
+					myestr = "<tr><td>" + res[i].companyname + "</td><td>" + res[i].description + "</td><td>"
+							+ res[i].fromdate + "</td><td>" + res[i].todate + "</td></tr>";
+				} else {
+					myestr = myestr + "<tr><td>" + res[i].companyname + "</td><td>" + res[i].description + "</td><td>"
+							+ res[i].fromdate + "</td><td>" + res[i].todate + "</td></tr>";
+				}
+			}
+			tstr ="<table id='academics'><thead><tr><th scope='col'>Company Name</th><th scope='col'>Designation</th>"
+				 +"<th scope='col'>From Date</th><th scope='col'>To Date</th></tr></thead>";
+		
+			if (myestr == undefined)
+				myestr = "<tr><td colspan=4 ><center>Information Is Not Available</center></td></tr></table>";
+			document.getElementById('myetable').innerHTML = tstr + myestr + "</table>";
+
+			var myres = "(" + temp[3] + ")";
+			var res = eval(myres);
+			var mytstr;
+			for ( var i = 0; i < res.length; i++) {
+				if (i == 0) {
+					mytstr = "<tr><td>" + res[i].technology + "</td><td>" + res[i].skills + "</td></tr>";
+				} else {
+					mytstr += "<tr><td>" + res[i].technology + "</td><td>" + res[i].skills + "</td></tr>";
+				}
+			}
+
+			if (mytstr == undefined)
+				mytstr = "<tr><td colspan=2 ><center>Information Is Not Available</center></td></tr>";
+
+			//document.getElementById('myttable').innerHTML = mytstr;
+
+			showDialog();
+		} else {
+			alert("User haven't added their details");
+		}
+	}
+	
+	getProfile = function(userid) {
+
+		var frm = document.forms["ProfileForm"];
+
+		$.ajax({
+			url : "callProfile.do",
+			data : {
+				userId : userid,
+				op : "getRecord"
+			},
+			success : function(data) {
+				if (data == null) {
+					message("User haven't added their details");
+				} else {
+					var res = eval("data");
+					dispProfile(res);
+				}
+			}
+		});
+	}
+	function getUsers() {
+		var frm = document.forms["groups"];
+		//frm.action = "/ViewUser.do";
+		frm.submit();
+	}
+	
+	function savePassword() {
+		var data = $.trim($("#pass").val());
+		var dataAgain = $.trim($("#conf").val());
+		if (data == '' || dataAgain == '')
+			alert("Please enter Password value");
+		else if(data != dataAgain)
+			alert("Please enter same Password value");
+		else {
+			var userId = $("#useridpass").val();
+			var emailFlag = $('#emailFlag').is(':checked')?"true":"false";
+			var passEmail = $('#passEmail').val();
+			$.ajax({
+				type: "POST",
+				url : "changePassword.do",
+				data : {
+					userId : userId,
+					data : data,
+					emailFlag : emailFlag,
+					passEmail : passEmail
+				},
+				success : function(data) {
+					var res = $.trim(data);
+					if(res == 'done') {
+						window.location.reload(true);
+					} else {
+						alert('Error while sending the mail, Please try again.');
+					}
+				}
+			});
+			
+		}
+	}
+
+	resetPassword = function(userid,email) {
+		$("#passwordDialog").dialog({
+			autoOpen : true, height : '230', width : 'auto', modal : true, closeOnEscape : false
+		});
+		$("#passwordDialog").dialog('option', 'title', "Change Password");
+		$("#passwordDialog").dialog('option', 'show', 'drop');
+		$("#passwordDialog").dialog('option', 'resizable', false);
+		var strHtml = "<input type='hidden' id='useridpass' value='" + userid + "' /><input type='hidden' id='passEmail' value='" + email + "' /><table>";  
+		strHtml += "<tr><td>New Password:</td><td><input type='password' size='5' id='pass'><span class='mandatory'>*</span></td></tr>";
+		strHtml += "<tr><td>Confirm Password:</td><td><input type='password' size='5' id='conf'><span class='mandatory'>*</span></td></tr>";
+		strHtml += "<tr><td>Send Email:</td><td><input type='checkbox' id='emailFlag'></td></tr>";
+		strHtml += "<tr><td colspan='2' align='center'><button onclick='return savePassword();' class='btn_green'>Save</button></td></tr></table>";
+		$("#passwordDialog").html(strHtml);
+		$("#passwordDialog").dialog('open');
+	}
+</script>
+</head>
+
+<body>
+	
+
+	<div id="wrapper">
+		
+<div id="header">
+     <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+ <ul id="topnav">
+  <li><a href="My Profile - Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li class="active"><a href="Groups - Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Groups - Online Exam to Evaluate Knowledge.html" class="active">User Groups</a></li>
+					<li><a href="Add New Users - Online Exam to Evaluate Knowledge.html">Add User</a></li>
+					<li><a href="View Profile - Online Exam to Evaluate Knowledge.html
+">User List</a></li>
+					<li><a href="Import Users - Online Exam to Evaluate Knowledge.html">Import Users</a></li>
+				</ul>
+				<div class="sidebar_note"><p class="message note">You can review the user profiles in detail</p></div>
+			</div>
+			<div id="main">
+				<h3>Group Wise User List</h3>
+				
+				<hr>				
+				<div class="table_top">
+				<form action="#" name="groups">
+				<input type="hidden" name="operation" id="operation">
+				<input type="hidden" name="email" id="email">
+				<input type="hidden" name="password" id="password">
+				<input type="hidden" name="cpassword" id="cpassword">
+				<input type="hidden" name="status" id="status">
+				<input type="hidden" name="question" id="question">
+				<input type="hidden" name="answer" id="answer">
+				<input type="hidden" name="companyId" id="companyId">
+				<select name="groupid" id="groupid" >
+									<option value="0">All Groups</option>
+									
+										<option value="3374">Default Group</option>
+									
+				</select>
+				</form>
+				<script type="text/javascript">
+					
+					var list = document.getElementById('groupid');
+					for ( var intI = 0; intI < list.options.length; intI++) {
+						if (list.options[intI].value == 0) {
+							list.options[intI].selected = true;
+						}
+					}
+					
+				</script>
+				</div>
+				
+				<div id="dialog" style="display: none;">
+					<div>
+						<div class="rt_tablive"><ul class="rt_tabnav"><li class="rt_tabactive"><a href="#" title="Personal">Personal</a></li><li class=""><a href="#" title="Academics">Academics</a></li><li class=""><a href="#" title="Experience">Experience</a></li></ul>
+							<div class="rt_tabtab " id="#round_corner" title="">
+								<h2>Personal</h2>
+								<div id="myptable"></div>
+							</div>
+							<div class="rt_tabtab rt_tabtabhide" id="#round_corner" title="">
+								<h2>Academics</h2>
+								<div id="myatable"></div>
+							</div>
+							<div class="rt_tabtab rt_tabtabhide" title="">
+								<h2>Experience</h2>
+									<div id="myetable"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+					<div id="example_wrapper" class="dataTables_wrapper" role="grid">
+					<!--
+					<div id="example_length" class="dataTables_length"><label>Show <select size="1" name="example_length" aria-controls="example"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text" aria-controls="example"></label></div>
+					-->
+					<table class="display dataTable" id="example" aria-describedby="example_info">
+						<thead>
+							<tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Group Name: activate to sort column descending" style="width: 196px;">Group Name</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="User List: activate to sort column ascending" style="width: 403px;">User List</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="View Profile: activate to sort column ascending" style="width: 274px;">View Profile</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Options: activate to sort column ascending" style="width: 105px;">Options</th></tr>
+						</thead>
+						
+						<tfoot>
+						</tfoot>
+					<tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd">
+									<td class=" sorting_1">Default Group</td>
+									<td class=" sorting_2"><input type="hidden" name="userId" value="19771">
+										testcandidate2645@wikiTest.com</td>
+									<td class=" "><a href="#"><img src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/user.png" alt="wikiTest" title="View Profile"></a>
+									&nbsp;&nbsp;
+									<a href="#" title="Reset Password">Reset Password</a><!-- <img src="< %=request.getContextPath()%>/images/edit.png" /> -->
+									</td>
+									<td class=" "><a href="#"><img src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/delete.png" title="Delete"></a></td>
+								</tr></tbody></table>
+								<!--
+								<div class="dataTables_info" id="example_info">Showing 1 to 1 of 1 entries</div><div class="dataTables_paginate paging_two_button" id="example_paginate"><a class="paginate_disabled_previous" tabindex="0" role="button" id="example_previous" aria-controls="example"></a><a class="paginate_disabled_next" tabindex="0" role="button" id="example_next" aria-controls="example"></a></div>
+								-->
+								</div>
+				
+			</div>
+		</div>
+		</div>
+		<div id="passwordDialog"></div>
+		<script type="text/javascript" charset="utf-8">
+			/* Define two custom functions (asc and desc) for string sorting */
+			jQuery.fn.dataTableExt.oSort['string-case-asc'] = function(x, y) {
+				return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+			};
+
+			jQuery.fn.dataTableExt.oSort['string-case-desc'] = function(x, y) {
+				return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+			};
+
+			$(document).ready(function() {
+				/* Build the DataTable with third column using our custom sort functions */
+				$('#example').dataTable({
+					"aaSorting" : [ [ 0, 'asc' ], [ 1, 'asc' ] ],
+					"aoColumnDefs" : [ {
+						"sType" : 'string-case',
+						"aTargets" : [ 1 ]
+					} ]
+				});
+
+				Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+				
+			});
+		</script>
+<img height="1" width="1" src="./View Profile - Kaldin Online Exam to Evaluate Knowledge_files/hit.php">		
+
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>

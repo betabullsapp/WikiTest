@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>wikiTest</title>
+
+<link href="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/ui.core.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/tabber.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/feedback.js"></script>
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/createuser.js"></script>
+<script type="text/javascript">
+	function hidemessage() {
+		document.getElementById("messagep").style.display = "none";
+	}
+	
+   $(document).ready(function() {
+     Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+   });      
+</script>
+</head>
+<body>
+	
+	<div id="wrapper">
+		
+<div id="header">
+     <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li class="active"><a href="Groups - Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Groups - Online Exam to Evaluate Knowledge.html" class="active">User Groups</a></li>
+					<li><a href="Add New Users - Online Exam to Evaluate Knowledge.html">Add User</a></li>
+					<li><a href="View Profile - Online Exam to Evaluate Knowledge.html
+">User List</a></li>
+					<li><a href="Import Users - Online Exam to Evaluate Knowledge.html">Import Users</a></li>
+				</ul>
+				<div class="sidebar_note message note"><p>You can add multiple users in the group which will be used while scheduling the exam</p></div>
+			</div>
+		<div id="main">
+				<h3>Add New Users</h3>
+				<hr>
+			<p class="message note">To Add multiple users please separate email ids by comma ( , ) OR have one email id in one line. </p>
+
+
+			<form name="CandidateForm" method="post" action="#">
+				<div class="new_user">
+					
+					
+					
+					<p>
+						<label>Groups:</label>
+						<select name="groupid" id="groupid" style="width: 442px;">
+								<option value="0">Select Group</option>
+								
+								 	
+                            		
+                            		    <option value="3374">Default Group</option>
+                            		
+								
+						</select>
+						<a href="Groups - Online Exam to Evaluate Knowledge.html" class="btn_green_sml">Add Group</a>
+					</p>
+					<p>
+						<label style="vertical-align: top">Add emails:</label>
+						<textarea name="email" cols="50" rows="10" id="email"></textarea>
+					</p>
+					
+					
+					
+					<!--<tr>
+			<td><label>	Password:</label></td>
+			<td><input type="password" name="password" size="35" value=""></td>
+		</tr>
+		-->
+		
+					<p>
+					<label></label>
+						<button class="btn_green">Add Users</button>
+					</p>
+				</div>
+				<!--		<p>-->
+				<!--		<label>	Status:</label>-->
+				<!--			<select name="status">-->
+				<!--				<option value="1" selected="selected">Activated</option>-->
+				<!--				<option value="0">Deactivated</option>-->
+				<!--</select>-->
+				<!--		</p>-->
+				<input type="hidden" name="hiddenEmail" value="" id="hiddenEmail">
+			</form>
+		</div>
+	</div>
+</div>
+<img height="1" width="1" src="./Add New Users - Kaldin Online Exam to Evaluate Knowledge_files/hit.php">
+
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>

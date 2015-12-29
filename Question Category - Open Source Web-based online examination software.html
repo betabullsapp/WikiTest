@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>wikiTest</title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Question Category - Kaldin _ Open Source Web-based online examination software_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Question Category - Kaldin _ Open Source Web-based online examination software_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/ui.core.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/tabber.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/feedback.js"></script>
+<script type="text/javascript" src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+
+<script type="text/javascript" charset="utf-8">
+function savesubject() {	
+	var sub=document.getElementById("subName").value;
+
+	if(sub==""){
+			alert('Enter category name!');
+			return false;
+	}else if(sub[0]==" "){
+			alert('Do not enter space at beginning!');
+			return false;
+	}else {
+		$.post("Subject.do", {
+			check : "checksubject",
+			subname : sub
+		},
+				function(data) {
+					if (data == 'Found') {
+						alert('Category already exists');
+					} else {
+						var frm=document.forms[1];
+						//frm.operation.value="add";
+						frm.subjectName.value=sub;			
+						frm.topicRedirect.value=false;
+						frm.submit();
+					}
+				});
+	}
+}
+function dopage(page,op){
+    
+    
+    	document.forms[1].operation.value ="LIST";
+    	document.forms[1].startPage.value = page;
+    	document.forms[1].submit();
+    
+}
+function doSubmit(){
+	var frm=document.forms[1];
+	frm.submit();
+}
+
+function doSubjectAdd(){	
+	document.getElementById("subName").value="";	
+}
+function charsonly(e){
+	var unicode=e.charCode? e.charCode : e.keyCode
+	if (unicode!=8 && unicode!=43 && unicode!=35 && unicode!=32 && unicode!=37 && unicode!=38 && unicode!=39 && unicode!=40 &&  unicode!=127 && unicode!=46 && (unicode<65||unicode>90) && (unicode<97 || unicode>122)){ //if the key isn't the backspace key (which we should allow)
+		return false // disable key press
+	}
+}
+function showDialog(opr) {
+		var frm=document.forms[0];
+		frm.operation.value=opr;
+		document.getElementById("dialog").style.display='';
+		document.getElementById("add_category").style.display= 'none';
+}
+
+function cancelAddOpr(){
+	var frm=document.forms[0];
+	frm.operation.value="";
+	document.getElementById("dialog").style.display='none';
+	document.getElementById("add_category").style.display= '';
+}
+
+function addCategory(){
+	showDialog('add');
+	var frm=document.forms[0];
+	var frm1=document.forms[1];
+	frm1.operation.value="add";
+	frm.subjectName.value="";
+	
+}
+
+function showEditDialog(subid,subName) {
+	showDialog('edit');
+	var frm=document.forms[0];
+	var frm1=document.forms[1];
+	frm.subjectName.value=subName;
+	//frm.operation.value="edit";
+	
+	frm.subjectId.value=subid;
+	
+	frm1.subjectId.value=subid;
+	frm1.operation.value="edit";
+	
+	/*$(document).ready(function() {
+		$("#editdialog").dialog({ autoOpen: true, height: 'auto', width: 'auto', modal: true, closeOnEscape:false });
+	    $("#editdialog").dialog('option', 'title', "Question Category");
+		$("#editdialog").dialog('option', 'show', 'drop');
+	    $("#editdialog").dialog('option', 'resizable', true)
+		$("#editdialog").dialog('open');
+	} );*/
+}
+
+	
+	
+	
+function doSubjectDelete(subid,subName,formno)	{
+		document.getElementById("subName").value=subName;
+		if(formno== "1"){
+		var frm1=document.forms[1];
+		frm1.subjectId.value=subid;
+		frm1.operation.value="delete";
+		if(confirm('Do you want to delete this Question Category?')){
+			doSubmit();
+		}}
+		else{
+			//alert("wrong form");
+			if(formno== "2"){
+		var frm2=document.forms[2];
+		frm2.subjectId.value=subid;
+		frm2.operation.value="delete";
+		if(confirm('Do you want to delete this Question Category?')){
+			doSubmit();
+			}}
+	}}
+
+function editsubject()	{
+	var sub=document.getElementById("newsubjectname").value;
+	if(sub==""){
+		alert('Category can not be blank!');
+		return false;
+	}else if(sub==" "){
+		alert('Do not enter space at beginning!');
+		return false;
+	}else {
+		$.post("Subject.do", {
+			check : "checksubject",
+			subname : sub
+		},
+			function(data) {
+				if (data == 'Found') {
+					alert('Category already exists');
+				} else {
+					var frm=document.forms[1];		
+					frm.operation.value="edit";
+					frm.submit();
+				}
+			});
+	}
+}	
+
+function submitSearch(){
+	var keyword = document.getElementById("searchtext").value;
+	var frm = document.forms[2];
+	frm.searchKeyword.value = keyword;
+	frm.submit();
+}
+</script>
+</head>
+<body>
+	
+<div id="wrapper">
+	
+<div id="header">
+   
+         <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+      
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li class="active"><a href="Question List - Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+
+	<div id="content">
+		<div id="sidebar">
+			<ul class="sidebar_nav">
+					<li><a href="Question List - Open Source Web-based online examination software.html" class="active">Questions</a></li>		
+					<li><a href="Question Category - Open Source Web-based online examination software.html
+">Question Category</a></li>
+					<li><a href="Question Sub Category - Open Source Web-based online examination software.html
+">Question Sub-Category</a></li>
+					<li><a href="Question Complexity - Open Source Web-based online examination software.html
+">Complexity</a></li>
+					<li><a href="Import Questions - Online Exam to Evaluate Knowledge.html
+">Import Questions</a></li>
+				</ul>
+			<div class="sidebar_note message note"><p>Arrange questions into categories, sub-categories and their complexities. makes it easy to group and find questions.</p>
+				<p>Question paper can contain combination of questions from different categories and complexities giving you an ability to design much simpler to most complex exams you like.</p>
+				</div>
+		</div>
+		<!--RIGHT SECTION ENDS HERE-->
+		<div id="main">
+			<h3>Question Category</h3>
+			<hr>
+			
+			
+			
+			<div align="center" style="width:50%;padding: 10px;">
+				<div id="dialog" style="display: none;">
+					<form name="SubjectForm" method="post" action="#">
+						
+						
+							<input type="hidden" name="operation" value="">
+							<input type="hidden" name="topicRedirect" value="false">
+							<input type="hidden" name="subjectId" value="0">
+							<input type="hidden" name="startPage" value="1">
+								<table width="100%" style="border: 1px solid;">
+									<tbody><tr>
+										<th class="boxtitle">
+											Add Category
+										</th>										
+									</tr>
+									<tr>
+										<td style="border:0;height: 15px;">
+										&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td style="border:0;">
+											Category: <input type="text" name="subjectName" size="30" value="" id="subName">
+										</td>
+									</tr>
+									<tr>
+										<td align="right" style="border:0">
+											<input type="button" value="Cancel" class="btn_green">&nbsp;
+											<input type="button" value="Save" class="btn_green">
+										</td>
+									</tr>
+								</tbody></table>
+						
+					</form>
+				</div>
+			</div>
+			
+			<div class="table_top" style="position: relative;">
+			<button class="btn_green_sml" id="add_category">Add Category</button>
+				<div style="float: right; margin: 0 0 0 10px;">
+						<input type="text" id="searchtext" name="searchtext" size="100" style="width:200px;important!">
+						<button type="button" class="btn_green_sml">Search</button>
+				</div> 
+			</div>
+							
+			
+				<table class="display" id="example">
+					<thead>
+						<tr>
+							<th scope="col">Question Category</th>
+							<th scope="col" align="center">Options</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+							<tr>
+								<td>
+										Aptitude Questions
+										
+											   
+											  (29 
+											  
+											  questions)
+											  
+										
+										</td>	
+								<td width="10%" align="center"><a href="#">
+										<img src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/edit.png" title="Edit">
+								</a>&nbsp;<a href="#" class="basicDelete">
+										<img src="./Question Category - Kaldin _ Open Source Web-based online examination software_files/delete.png" title="Delete">
+								</a></td>
+							</tr>
+						
+					</tbody>
+				</table>
+				
+				
+				<div id="editdialog" style="display: none;">
+					<form name="SubjectForm" method="post" action="#">
+						<input type="hidden" name="startPage" value="1">
+						<input type="hidden" name="operation" value="">
+						<input type="hidden" name="topicRedirect" value="false">
+						
+							<input type="hidden" name="subjectId" value="0">
+												
+								<p>Category: <input type="text" name="subjectName" size="30" value="" id="newsubjectname"></p>
+								<p style="text-align: right;"><input type="button" value="Save" class="btn_green"></p>
+							
+						
+					</form>
+				</div>
+				
+				<table style="width:100%">						
+					<tbody><tr>
+					<td>
+						
+						<font color="red">Total: 1</font>
+						
+					</td>
+					<td align="right">
+					
+	
+		
+		<!--  
+					-->&nbsp;&nbsp;
+		
+
+		
+		
+			
+
+		
+
+		
+
+		
+	
+
+
+	
+
+					</td>
+					</tr>
+				</tbody></table>	
+			
+		</div>
+		</div>
+</div>	
+
+<form name="SubjectForm" method="post" action="#">
+	<input type="hidden" name="searchKeyword" value="">
+</form>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });			
+	} );
+</script> 
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>
