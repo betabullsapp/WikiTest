@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>wikiTest</title>
+<meta name="description" content="Comprehensive examination software for conducting any type of exam including online exam, 
+pre-screening for colleges, universities and companies">
+<meta name="keywords" content="open source examination software, pre-screening tests, test software, practice exams, Examinations, Evaluations, Exam Reports, Online free exams, Online exam software free, 
+Software for online exam Online education and assessment software, Online Tests, About online examination, Free online examination, Exam test online, Online testing exam,
+ Open source examination tool">
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/ui.core.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/tabber.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/feedback.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript">
+
+blank = function() {   
+	var frm=document.forms[0];
+	var fname=frm.firstName.value;
+   	//var lname=frm.elements[1].value;
+   	var cname=frm.companyName.value;	
+    var uname=frm.userName.value;	
+    //var pwd=frm.elements[4].value;	
+    var cno=frm.contactNumber.value;
+    //var add=frm.elements[6].value;		
+    if(fname=="" || cname==""  || cno=="" || uname=="") {
+      	alert('Blank Not Allowed.');
+      	return false;		
+    } else {
+    	if(ValidatePhone()){
+   			frm.submit();
+    	}
+    }
+}
+
+function textvalid()
+{
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < cname.length;  i++)
+	  {
+	  ch =cname.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+		frm.companyName.value="";
+	  frm.companyName.focus();
+	  return (false);
+	  }
+	  var illegalChars = /^[0-9]/;
+	  if (illegalChars.test(cname))
+	  {
+		  alert('Please Name Should Start With Character');
+		  frm.companyName.value="";
+		  frm.companyName.focus();
+	  }
+ }
+
+  function numericCtn()
+   {
+	  var frm=document.forms[0];
+	  var cno=frm.contactNumber.value;
+	  
+	      var intCharCode;
+      for (var i = 0; i < cno.length; i++)
+           {
+    	   intCharCode = cno.charCodeAt(i);  
+    	   
+          if (!((intCharCode >= 48 && intCharCode <= 57))) 
+          {    
+        	  alert('Please Enter Number');
+        	  frm.contactNumber.value="";
+              frm.contactNumber.focus(); 
+         	  return false; 
+        		
+          }
+          
+       }
+      if(cno.length != 10)
+      {
+    	  alert('Please Enter Valid Number');
+    	  frm.contactNumber.value="";
+          frm.contactNumber.focus(); 
+     	  return false; 
+      } 
+ }
+
+  function textCname()
+  {
+	  var frm=document.forms[0];
+	  var cname=frm.companyName.value;
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < cname.length;  i++)
+	  {
+	  ch =cname.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+		//frm.companyName.value="";
+	  frm.companyName.focus();
+	  return (false);
+	  }
+	  var illegalChars = /^[0-9]/;
+	  if (illegalChars.test(cname))
+	  {
+		  alert('Please Name Should Start With Character');
+		  frm.companyName.value="";
+		  frm.companyName.focus();
+	  }
+   }
+  function textLname()
+  {
+       
+	  var frm=document.forms[0];
+	  var lname=frm.elements[1].value;
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < lname.length;  i++)
+	  {
+	  ch =lname.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+		frm.elements[1].value="";
+	  frm.elements[1].focus();
+	  return (false);
+	  }
+	  var illegalChars = /^[0-9]/;
+	  if (illegalChars.test(lname))
+	  {
+		  alert('Please Name Should Start With Character');
+		  frm.elements[1].value="";
+		  frm.elements[1].focus();
+	  }
+  }
+
+  function textFname()
+  {
+	  var frm=document.forms[0];
+	  var fname=frm.elements[0].value;
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < fname.length;  i++)
+	  {
+	  ch =fname.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+		frm.firstName.value="";
+	  frm.firstName.focus();
+	  return (false);
+	  }
+	  var illegalChars = /^[0-9]/;
+	  if (illegalChars.test(fname))
+	  {
+		  alert('Please Name Should Start With Character');
+		  frm.firstName.value="";
+		  frm.firstName.focus();
+	  }
+  }
+
+  function textAdd()
+  {
+       
+	  var frm=document.forms[0];
+	  var add=frm.elements[6].value;
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < add.length;  i++)
+	  {
+	  ch =add.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+		frm.elements[6].value="";
+	  frm.elements[6].focus();
+	  return (false);
+	  }
+     }
+  function textPwd()
+  {
+       
+	  var frm=document.forms[0];
+	  var pwd=frm.elements[4].value;
+	  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  var allValid = true;
+	  for (i = 0;  i < pwd.length;  i++)
+	  {
+	  ch =pwd.charAt(i);
+	  for (j = 0;  j < checkOK.length;  j++)
+	  if (ch == checkOK.charAt(j))
+	  break;
+	  if (j == checkOK.length)
+	  {
+	  allValid = false;
+	  break;
+	  }
+	  }
+	  if (!allValid)
+	  {
+	  alert('Please enter only letter and numeric characters');
+	  frm.elements[4].focus();
+	  return (false);
+	  }
+	  if (pwd.length < 5)
+	  {
+	  alert('Please enter at least 5 characters in the Password field.');
+		frm.elements[4].value="";
+       	frm.elements[4].focus();
+	  return (false);
+	  }
+	
+     }
+  function textUname()
+  {  
+	  var frm=document.forms[0];
+	  var email=frm.userName.value;
+	  var atpos=email.indexOf("@");
+	  var dotpos=email.lastIndexOf(".");
+	  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+		{
+		  alert('Enter valid e-mail address');
+		  //frm.userName.value="";
+          frm.userName.focus(); 
+		  return false;
+		 }
+  }
+  function setTimeZo()
+  {
+	  var jstz=function(){var b=function(a){a=-a.getTimezoneOffset();return a!==null?a:0},d=function(){return b(new Date(2010,0,1,0,0,0,0))},e=function(){return b(new Date(2010,5,1,0,0,0,0))},c=function(){var a=d(),b=e(),f=d()-e();if(f<0)return a+",1";else if(f>0)return b+",1,s";return a+",0"};return{determine_timezone:function(){var a=c();return new jstz.TimeZone(jstz.olson.timezones[a])},date_is_dst:function(a){var c=a.getMonth()>5?e():d(),a=b(a);return c-a!==0}}}();
+	  jstz.TimeZone=function(){var b=null,d=null,e=null,c=function(a){e=a[0];b=a[1];d=a[2];if(typeof jstz.olson.ambiguity_list[b]!=="undefined")for(var a=jstz.olson.ambiguity_list[b],c=a.length,f=0,g=a[0];f<c;f+=1)if(g=a[f],jstz.date_is_dst(jstz.olson.dst_start_dates[g])){b=g;break}};c.prototype={constructor:jstz.TimeZone,name:function(){return b},dst:function(){return d},offset:function(){return e}};return c}();jstz.olson={};
+	  jstz.olson.timezones=function(){return{"-720,0":["-12:00","Etc/GMT+12",!1],"-660,0":["-11:00","Pacific/Pago_Pago",!1],"-600,1":["-11:00","America/Adak",!0],"-660,1,s":["-11:00","Pacific/Apia",!0],"-600,0":["-10:00","Pacific/Honolulu",!1],"-570,0":["-09:30","Pacific/Marquesas",!1],"-540,0":["-09:00","Pacific/Gambier",!1],"-540,1":["-09:00","America/Anchorage",!0],"-480,1":["-08:00","America/Los_Angeles",!0],"-480,0":["-08:00","Pacific/Pitcairn",!1],"-420,0":["-07:00","America/Phoenix",!1],"-420,1":["-07:00",
+	  "America/Denver",!0],"-360,0":["-06:00","America/Guatemala",!1],"-360,1":["-06:00","America/Chicago",!0],"-360,1,s":["-06:00","Pacific/Easter",!0],"-300,0":["-05:00","America/Bogota",!1],"-300,1":["-05:00","America/New_York",!0],"-270,0":["-04:30","America/Caracas",!1],"-240,1":["-04:00","America/Halifax",!0],"-240,0":["-04:00","America/Santo_Domingo",!1],"-240,1,s":["-04:00","America/Asuncion",!0],"-210,1":["-03:30","America/St_Johns",!0],"-180,1":["-03:00","America/Godthab",!0],"-180,0":["-03:00",
+	  "America/Argentina/Buenos_Aires",!1],"-180,1,s":["-03:00","America/Montevideo",!0],"-120,0":["-02:00","America/Noronha",!1],"-120,1":["-02:00","Etc/GMT+2",!0],"-60,1":["-01:00","Atlantic/Azores",!0],"-60,0":["-01:00","Atlantic/Cape_Verde",!1],"0,0":["00:00","Etc/UTC",!1],"0,1":["00:00","Europe/London",!0],"60,1":["+01:00","Europe/Berlin",!0],"60,0":["+01:00","Africa/Lagos",!1],"60,1,s":["+01:00","Africa/Windhoek",!0],"120,1":["+02:00","Asia/Beirut",!0],"120,0":["+02:00","Africa/Johannesburg",!1],
+	  "180,1":["+03:00","Europe/Moscow",!0],"180,0":["+03:00","Asia/Baghdad",!1],"210,1":["+03:30","Asia/Tehran",!0],"240,0":["+04:00","Asia/Dubai",!1],"240,1":["+04:00","Asia/Yerevan",!0],"270,0":["+04:30","Asia/Kabul",!1],"300,1":["+05:00","Asia/Yekaterinburg",!0],"300,0":["+05:00","Asia/Karachi",!1],"330,0":["+05:30","Asia/Kolkata",!1],"345,0":["+05:45","Asia/Kathmandu",!1],"360,0":["+06:00","Asia/Dhaka",!1],"360,1":["+06:00","Asia/Omsk",!0],"390,0":["+06:30","Asia/Rangoon",!1],"420,1":["+07:00","Asia/Krasnoyarsk",
+	  !0],"420,0":["+07:00","Asia/Jakarta",!1],"480,0":["+08:00","Asia/Shanghai",!1],"480,1":["+08:00","Asia/Irkutsk",!0],"525,0":["+08:45","Australia/Eucla",!0],"525,1,s":["+08:45","Australia/Eucla",!0],"540,1":["+09:00","Asia/Yakutsk",!0],"540,0":["+09:00","Asia/Tokyo",!1],"570,0":["+09:30","Australia/Darwin",!1],"570,1,s":["+09:30","Australia/Adelaide",!0],"600,0":["+10:00","Australia/Brisbane",!1],"600,1":["+10:00","Asia/Vladivostok",!0],"600,1,s":["+10:00","Australia/Sydney",!0],"630,1,s":["+10:30",
+	  "Australia/Lord_Howe",!0],"660,1":["+11:00","Asia/Kamchatka",!0],"660,0":["+11:00","Pacific/Noumea",!1],"690,0":["+11:30","Pacific/Norfolk",!1],"720,1,s":["+12:00","Pacific/Auckland",!0],"720,0":["+12:00","Pacific/Tarawa",!1],"765,1,s":["+12:45","Pacific/Chatham",!0],"780,0":["+13:00","Pacific/Tongatapu",!1],"840,0":["+14:00","Pacific/Kiritimati",!1]}}();
+	  jstz.olson.dst_start_dates=function(){return{"America/Denver":new Date(2011,2,13,3,0,0,0),"America/Mazatlan":new Date(2011,3,3,3,0,0,0),"America/Chicago":new Date(2011,2,13,3,0,0,0),"America/Mexico_City":new Date(2011,3,3,3,0,0,0),"Atlantic/Stanley":new Date(2011,8,4,7,0,0,0),"America/Asuncion":new Date(2011,9,2,3,0,0,0),"America/Santiago":new Date(2011,9,9,3,0,0,0),"America/Campo_Grande":new Date(2011,9,16,5,0,0,0),"America/Montevideo":new Date(2011,9,2,3,0,0,0),"America/Sao_Paulo":new Date(2011,
+	  9,16,5,0,0,0),"America/Los_Angeles":new Date(2011,2,13,8,0,0,0),"America/Santa_Isabel":new Date(2011,3,5,8,0,0,0),"America/Havana":new Date(2011,2,13,2,0,0,0),"America/New_York":new Date(2011,2,13,7,0,0,0),"Asia/Gaza":new Date(2011,2,26,23,0,0,0),"Asia/Beirut":new Date(2011,2,27,1,0,0,0),"Europe/Minsk":new Date(2011,2,27,2,0,0,0),"Europe/Helsinki":new Date(2011,2,27,4,0,0,0),"Europe/Istanbul":new Date(2011,2,28,5,0,0,0),"Asia/Damascus":new Date(2011,3,1,2,0,0,0),"Asia/Jerusalem":new Date(2011,3,1,
+	  6,0,0,0),"Africa/Cairo":new Date(2010,3,30,4,0,0,0),"Asia/Yerevan":new Date(2011,2,27,4,0,0,0),"Asia/Baku":new Date(2011,2,27,8,0,0,0),"Pacific/Auckland":new Date(2011,8,26,7,0,0,0),"Pacific/Fiji":new Date(2010,11,29,23,0,0,0),"America/Halifax":new Date(2011,2,13,6,0,0,0),"America/Goose_Bay":new Date(2011,2,13,2,1,0,0),"America/Miquelon":new Date(2011,2,13,5,0,0,0),"America/Godthab":new Date(2011,2,27,1,0,0,0)}}();
+	  jstz.olson.ambiguity_list={"America/Denver":["America/Denver","America/Mazatlan"],"America/Chicago":["America/Chicago","America/Mexico_City"],"America/Asuncion":["Atlantic/Stanley","America/Asuncion","America/Santiago","America/Campo_Grande"],"America/Montevideo":["America/Montevideo","America/Sao_Paulo"],"Asia/Beirut":"Asia/Gaza,Asia/Beirut,Europe/Minsk,Europe/Helsinki,Europe/Istanbul,Asia/Damascus,Asia/Jerusalem,Africa/Cairo".split(","),"Asia/Yerevan":["Asia/Yerevan","Asia/Baku"],"Pacific/Auckland":["Pacific/Auckland",
+	  "Pacific/Fiji"],"America/Los_Angeles":["America/Los_Angeles","America/Santa_Isabel"],"America/New_York":["America/Havana","America/New_York"],"America/Halifax":["America/Goose_Bay","America/Halifax"],"America/Godthab":["America/Miquelon","America/Godthab"]};
+	  var timezone = jstz.determine_timezone();    
+	  var frm=document.forms[0];
+	  frm.timeZone.value=timezone.name();
+  }
+
+
+</script>
+
+
+  <script language="Javascript">
+  var digits = "0123456789";  
+  var phoneNumberDelimiters = "()- ";
+  // characters which are allowed in international phone numbers
+  // (a leading + is OK)
+  var validWorldPhoneChars = phoneNumberDelimiters + "+";  
+  var minDigitsInIPhoneNumber = 10;
+  function isInteger(s)
+  {   var i;
+      for (i = 0; i < s.length; i++)
+      {   
+          // Check that current character is number.
+          var c = s.charAt(i);
+          if (((c < "0") || (c > "9"))) return false;
+      }
+      // All characters are numbers.
+      return true;
+  }
+  function trim(s)
+  {   var i;
+      var returnString = "";      
+      for (i = 0; i < s.length; i++)
+      {             
+          var c = s.charAt(i);
+          if (c != " ") returnString += c;
+      }
+      return returnString;
+  }
+  function stripCharsInBag(s, bag)
+  {   var i;
+      var returnString = "";      
+      for (i = 0; i < s.length; i++)
+      {             
+          var c = s.charAt(i);
+          if (bag.indexOf(c) == -1) returnString += c;
+      }
+      return returnString;
+  }
+
+  function checkInternationalPhone(strPhone){
+  var bracket=3
+  strPhone=trim(strPhone);
+  if(strPhone.indexOf("+")>1) return false
+  if(strPhone.indexOf("-")!=-1)bracket=bracket+1
+  if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
+  var brchr=strPhone.indexOf("(")
+  if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
+  if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
+  s=stripCharsInBag(strPhone,validWorldPhoneChars);
+  return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
+  }
+
+  function ValidatePhone(){	
+	var frm=document.forms[0];
+  	var Phone=frm.contactNumber;
+  	
+  	if ((Phone.value==null)||(Phone.value=="")){
+  		alert('Please Enter your Phone Number');
+  		Phone.focus();
+  		return false;
+  	}
+  	if (checkInternationalPhone(Phone.value)==false){
+  		alert('Please Enter a Valid Phone Number');
+  		Phone.value="";
+  		Phone.focus();
+  		return false;
+  	}  	 
+  	return true;
+   }
+  </script>
+<style>
+select
+{
+ width:	300px;
+ height: 30px;
+ list-style:inside;
+ float: left;
+}
+table td  {
+    border-right: 1px solid #D6C69E;
+    border-top: 1px solid #D6C69E;
+    color: #5E4F36;
+    padding: 10px;
+}
+.admin_login_box {
+    background: none repeat scroll 0 0 #FDF5E6;
+    border: 10px solid #D6C69E;
+    display: inline-block;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+ 
+<!--     HEADER -->
+<!--  -->
+ 
+<div id="header">
+     <h1><a href="#"><img src="./Certificate Templates - Kaldin The Knowledge Evaluator_files/logo-blue.png" alt="wikiTest"></a></h1>
+  	
+    
+  
+  <!-- Not logged in -->
+	<ul id="nav"><li><a href="index2.html">Login</a></li></ul>
+  
+</div>
+  <!-- header end -->
+<!--     header end here -->
+    <div id="content">
+    <div id="regilogin">
+    <div id="signin_menu">
+    <form name="RegisterForm" method="post" action="#">
+     	<input type="hidden" name="lastName" value="">
+     	<input type="hidden" name="password" value="">
+     	<input type="hidden" name="address" value="">
+     	<input type="hidden" name="timeZone" value="Asia/Kolkata">
+     	<input type="hidden" name="country" value="">
+     	<input type="hidden" name="state" value="">
+    
+    <h4>SignUp to wikiTest</h4>
+   	
+     <p>
+     <label>Name:</label>
+     <input type="text" name="firstName" value="" onchange="return textFname();"> 
+     </p>
+
+     <!--<tr><td><label>Last Name:   </label></td><td><input type="text" name="lastName" value="" onchange="return textLname();">   <span class="mandatory" style="text-align:left">*</span></td></tr>
+     -->
+     
+     <p>
+     <label>Company:</label>
+     <input type="text" name="companyName" value="" onchange="return textCname();"> 
+     </p>
+     
+     <p><label>Email</label>
+     <input type="text" name="userName" value="" onchange="return textUname();">  
+     </p>
+     
+     <!--<tr><td><label>Password :    </label></td><td><input type="password" name="password" value="" onchange="return textPwd();">     <span class="mandatory" style="text-align:left">*</span></td></tr>
+     -->
+     
+     <p><label>Phone</label>
+	 <input type="text" name="contactNumber" maxlength="20" value=""> 
+     </p>
+     
+     <!--<tr><td><label>Address :     </label></td><td> <input type="text" name="address" value="" onchange="return textAdd();">     <span class="mandatory" style="text-align:left">*</span></td></tr>
+     --><script type="text/javascript">setTimeZo();</script>
+	 <!--<tr>
+     <td>
+         <label>Country :</label>
+     </td>
+     <td>
+     	 <select name="country"><option value="Select">Select</option>
+     	 	<option value="India">India</option>
+     	 	<option value="United State">United State</option>
+     	 	<option value="South Africa">South Africa</option>
+     	 	<option value="Canada">Canada</option></select>	
+     </td>     
+     </tr>
+     <tr>
+     <td>
+         <label>State :</label>
+     </td>
+     <td>
+     	 <select name="state"><option value="0">Select State</option>
+					<option value="Andaman and Nicobar">Andaman and Nicobar</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+					<option value="Assam">Assam</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Chhattisgarh">Chhattisgarh</option>
+					<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+					<option value="Daman and Diu">Daman and Diu</option>
+					<option value="Delhi ">Delhi</option>					
+					<option value="Goa">Goa</option>
+					<option value="Gujarat">Gujarat</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Himachal Pradesh">Himachal Pradesh</option>
+					<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+					<option value="Jharkhand">Jharkhand</option>
+					<option value="Karnataka">Karnataka</option>
+					<option value="Kerala">Kerala</option>
+					<option value="Lakshadeep">Lakshadeep</option>
+					<option value="Madya Pradesh">Madya Pradesh</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Manipur">Manipur</option>
+					<option value="Meghalaya">Meghalaya</option>
+					<option value="Mizoram">Mizoram</option>
+					<option value="Nagaland">Nagaland</option>
+					<option value="Orissa">Orissa</option>
+					<option value="Pondicherry">Pondicherry</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Sikkim">Sikkim</option>
+					<option value="Tamil Nadu">Tamil Nadu</option>
+					<option value="Tripura">Tripura</option>
+					<option value="Uttaranchal">Uttaranchal</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="West Bengal">West Bengal</option></select>		
+     </td>     
+     </tr>
+     -->
+     
+     <p><label></label><button class="btn_green" type="button">Register</button></p>
+     </form>
+     </div>  
+     
+             
+     <!--<input type="reset" class="btn_green"  value="Reset"></input>
+     --><!--<a href="/a/admin.do"><button class="btn_green" ><span>Back</span></button></a>-->
+     
+     
+  	  </div>
+      <div id="footer"> 
+
+
+<div class="copy">© Copyright 2015 <a href="#" target="_blank">wikiTest.com</a> | <a href="#">Terms &amp; Conditions</a></div></div>
+      </div>
+<link rel="stylesheet" href="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/feedback.css" type="text/css" media="screen"> 	
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/feedback.js"></script>
+<script type="text/javascript" src="./Sign Up - Kaldin _ Open Source Web-based online examination software_files/jquery.browser.min.js"></script>  
+<script type="text/javascript">
+   $(document).ready(function() {
+     Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+   });      
+</script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->    
+
+
+<!-- PAGE TIMING STATISTICS :  REQUEST TIMESTAMP | 2015-12-29_03.59.55 PROCESSING TIME | 1 ms  -->
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>

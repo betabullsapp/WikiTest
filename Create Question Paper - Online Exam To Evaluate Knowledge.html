@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>wikiTest</title>
+
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/ui.core.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/tabber.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/feedback.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/select2.js"></script>
+<link rel="stylesheet" href="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/select2.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/nicEdit.js"></script>
+<script type="text/javascript" src="./Create Question Paper - Kaldin Online Exam To Evaluate Knowledge_files/questionPaper.js"></script>
+<script type="text/javascript">
+	history.go(1);
+
+	function showDialog() {
+		var re = /^[0-9]+/
+		var givenquestion = document.getElementById("numberquestiongiven").value;
+		var markperquestion = document.getElementById("markperquestion").value;
+		//alert("markperquestion: " + markperquestion);
+		var passingmarks = document.getElementById("passingmarks").value;
+		//var markperquest =parseInt(totalMark) /parseInt(givenquestion);
+		var re2 = /\./;
+		var testname = document.getElementById("testname").value;
+		if (testname == 0 || testname == null) {
+			alert("Enter Name of Question Paper! ");
+			return false;
+		} else if(givenquestion == 0 || givenquestion == null) {
+			alert("Enter the No of Questions!");
+			return false;
+		} else if (isNaN(givenquestion)) {
+			alert("Please Enter Valid No of Questions");
+			return false;
+		} else if (markperquestion == 0 || markperquestion == null) {
+			alert("Enter the marks per Questions!");
+			return false;
+		} else if (passingmarks == 0 || passingmarks == null) {
+			alert("Enter the passing marks! ");
+			return false;
+		} /*else if (parseInt(passingmarks) > parseInt(totalMark)) {
+			alert("Passing marks should not be greater than total marks");
+
+			return false;
+		} */else if (re2.test(markperquestion)) {
+			alert("Please change total marks or number of questions.");
+
+			return false;
+		} else {
+			$("#dialog").dialog({
+				autoOpen : true, height : '325', width : 'auto', modal : true, closeOnEscape : false
+			});
+			$("#dialog").dialog('option', 'title', "Manage Questions");
+			$("#dialog").dialog('option', 'show', 'drop');
+			$("#dialog").dialog('option', 'resizable', true)
+			var strHtml = "<table>"
+			strHtml += "<tr><td>Category:</td><td><select id='subjectname' onchange='getTopic()' style='width: 223px;'><option value='0'>Select Category:</option><option value='6562' >Aptitude Questions (29)</option></select><span class='mandatory'>*</span></td></tr>";
+			strHtml += "<tr><td>Sub Category:</td><td><div id='topicCont'><select id='subsubjectname' style='width: 223px;'><option>Select Sub Category</option><option value='3491' >General Questions (29)</option></select></div><div id='availableQuestions'></div></td></tr>";
+			strHtml += "<tr><td>Complexity:</td><td><div id='complexity'><select name='levelid' id='testlevel' style='width: 223px;'><option value='0'>Select Complexity</option><option value='8058'>Beginners  (29)</option></select></div></td></tr>";
+			strHtml += "<tr><td>No. of Questions:</td><td><input type='text' size='5' id='numberquestion' onkeypress='return numbersonly(event)' onblur='return validate()'><span class='mandatory'>*</span></td></tr>";
+			strHtml += "<tr><td colspan='2' align='center'><button onclick='return savetopic();' class='btn_green'>Save</button></td></tr></table>";
+			$("#dialog").html(strHtml);
+			$("#dialog").html();
+			$("#dialog").dialog('open');
+			
+			
+			$("#subjectname").select2({
+				placeholder: "",
+				allowClear: true
+			});
+			
+			$("#subsubjectname").select2({
+				placeholder: "",
+				allowClear: true
+			});
+			
+			$("#testlevel").select2({
+				placeholder: "",
+				allowClear: true
+			});
+		}
+	}
+
+	function doSubmit() {
+		var isComplete = true;
+		if(document.getElementById("btnaddtopic").disabled == false){
+			isComplete = false;
+			alert("Please configure questions first!");			 
+		}
+		if(isComplete){
+		var re = /^[0-9]+/
+		var re2 = /\./;
+		var givenquestion = document.getElementById("numberquestiongiven").value;
+		var totalMark = document.getElementById("totalmarks").value;
+		var passingmarks = document.getElementById("passingmarks").value;
+		var testname = document.getElementById("testname").value;
+		if (testname == 0 || testname == null) {
+			alert("Enter Name of Question Paper! ");
+			return false;
+		} else if (givenquestion == 0 || givenquestion == null) {
+			alert("Enter the question number ! ");
+			return false;
+		} else if (totalMark == 0 || totalMark == null) {
+			alert("Enter the total marks ! ");
+			return false;
+		} else if (passingmarks == 0 || passingmarks == null) {
+			alert("Enter the passing marks! ");
+			return false;
+		} else if (parseInt(passingmarks) > parseInt(totalMark)) {
+			alert("Passing marks should not be greater than total marks");
+			return false;
+		}
+
+		totalMark1 = parseInt(totalMark);
+		givenquestion1 = parseInt(givenquestion);
+     	var markperquest = totalMark1 / givenquestion1;
+		if (re2.test(markperquest)) {
+			alert("Please change total marks or number of questions!");
+			return false;
+		}
+		/*var marks = parseInt(document.getElementById("totalmrk").innerHTML);
+		if (markperquest < marks) {
+			alert("You have to add more questions.");
+			document.getElementById("btnsave").disabled = true;
+			document.getElementById("btnaddtopic").disabled = false;
+			document.getElementById("markperquest").innerHTML = markperquest;
+			return false;
+		}
+		if (markperquest > marks) {
+			alert("Sorry! You have entered less question's");
+			return false;
+		}*/
+
+		if(parseInt(document.getElementById("totalquestioncnt").value) < givenquestion1){
+			alert("You have to add more questions.");
+			document.getElementById("btnsave").disabled = true;
+			document.getElementById("btnaddtopic").disabled = false;
+			document.getElementById("markperquest").innerHTML = markperquest;
+			return false;
+		}
+		
+		var frm = document.forms["QuestionPaperForm"];
+		//frm.perquestionmarks.value = document.getElementById("markperquest").innerHTML;
+		frm.submit();
+		}
+	}
+	
+</script>
+
+</head>
+
+<body>
+	
+	<div id="wrapper">
+		
+<div id="header">
+  <h1><a href="#"><img src="img/logo-blue.png" alt="wikiTest"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+   <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index2.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li class="active"><a href="Certificate Templates - The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="viewpending.html" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					<li><a href="Question Papers - Online Exam to Evaluate Knowledge.html" class="active">Question Paper</a></li>
+					<li><a href="Scheduled Exams - Online Exam to Evaluate Knowledge.html">Scheduled Exams</a></li>
+				</ul>
+				<div class="sidebar_note message note">
+				<p>Combine questions from different categories and complexities to create a complete Question Paper.</p>
+				<p>
+					1. Company ABC created a "First Round" question paper by selection 10 questions from aptitude, 10 from Analytical and 10 from Logical Categories each.
+					Company ABC then schedules exams every time they have walk in  interviews.
+					</p>
+					<p>
+					2. College XYZ have questions organized in categories "additions", "Multiplication" and "Division". Question paper "Maths" created using 25 questions from each of these categories and exam is scheduled every year using same question paper.
+					</p>
+					<p>
+					Note: You can choose categories while creating Question papers. Actual questions are selected randomly at the time of actual exam. Hence each question paper is unique in terms of question and order of questions.	
+					</p>
+				</div>
+			</div>
+			<div id="main">
+				<h3>Create Question Paper</h3>
+				<hr>
+				<div id="q_bank4">
+					<form name="QuestionPaperForm" method="post" action="#">
+						<div style="width: 100%; float: left;">
+						 <div id="QuestionPaper">
+								<p>
+									<label>Name of Question Paper:</label>
+									<input type="text" name="testname" value="" id="testname"> 
+									<small>Required</small>
+									</p>
+									<p>
+									<label>Duration:</label>
+									<select name="duration"><option value="15">15 Minutes</option>
+											<option value="30">30 Minutes</option>
+											<option value="45">45 Minutes</option>
+											<option value="60">60 Minutes</option>
+											<option value="90">90 Minutes</option>
+											<option value="120">120 Minutes</option>
+											<option value="150">150 Minutes</option>
+											<option value="180">180 Minutes</option>
+											<option value="210">210 Minutes</option>
+											<option value="240">240 Minutes</option></select>  
+									<small>Required</small>
+								</p>
+								<p>
+									<label>No Of Questions:</label>
+									<input type="text" name="noofquestions" value="" onkeypress="return numbersonly(event)" id="numberquestiongiven"> 
+									<small>Required</small>
+									</p>
+								<p>
+								<label>Marks per question:</label>
+									<input type="text" name="perquestionmarks" value="" onkeypress="return numbersonly(event)" onblur="calculateMark();" id="markperquestion">
+										
+										
+											<input type="hidden" name="opr" value="add">
+										 
+									<small>Required</small>
+									</p>
+								<p>
+									<label>Total Marks:</label>
+									<input type="hidden" name="totalmarks" value="" id="totalmarks">
+										<span id="totalmrk"></span>
+								</p>
+								<p>
+									<label>Passing Marks:</label>
+									<input type="text" name="passingmarks" value="" onkeypress="return numbersonly(event)" id="passingmarks"> 
+									<small>Required</small>
+									</p>
+								<p>
+								<label>Marks per wrong answer:</label>
+									<input type="text" name="negativemarks" value="" onkeypress="return numbersonly(event)" id="negativemarks"> 
+										<small class="more_info">(0 for no negative marking)</small>
+								</p>
+								
+								<p>
+								<label></label>
+								<input type="button" name="Add Topic" value="Manage Questions" id="btnaddtopic" class="btn_green">
+								</p>
+							</div>
+							<input type="hidden" id="totalquestioncnt">
+								<!-- left end -->
+							
+							
+						</div>						
+						<div id="selectedtopic" style="float:left; width: 100%; margin-bottom: 20px;">
+							
+						</div>
+						<div style="margin: 10px auto;">
+							<h6>Additional Comments to be shown before Exam Starts:</h6>
+							<textarea name="comments" cols="80" rows="10" id="comments" style="width: 100%;"></textarea>
+						</div>
+						<div>
+							<input type="hidden" name="edittestid" value="">
+									
+								<input type="submit" value="Save Question Paper"  id="btnsave" class="btn_green">
+								
+						</div>
+						<div id="dialog"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+<script type="text/javascript">
+	new nicEditor().panelInstance('textarea1');
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {		
+		Feedback({h2cPath: '/a' +  '/js/feedback/html2canvas.js' , url:'/a' +'/feedback' });
+	} );
+</script>	
+
+
+
+<button class="feedback-btn feedback-bottom-right" data-html2canvas-ignore="true">Send Feedback</button></body></html>
